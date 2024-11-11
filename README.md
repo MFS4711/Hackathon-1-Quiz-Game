@@ -130,58 +130,65 @@ As a user, I want an option to get a short explanation or hint for a tricky ques
 
 **Acceptance Criteria:**
 * provide a hint or help button for the user
-* the button displays a hint or solution.
+* the button displays a hint or solution
 
 ### Could-Have User Stories
 
 #### User Story 1
-
+In order to set how long I have to answer each question as a user, I can adjust the challenge level.
 
 **Acceptance Criteria:**
-
+* The user can choose a preferred timer duration (e.g., 15, 30, or 60 seconds).
+* The timer adjusts based on the user’s selection before starting the game.
 
 #### User Story 2
-
+As a user, I want to choose my preferred difficulty level so I can tailor the quiz to my knowledge.
 
 **Acceptance Criteria:**
-
+* The user can select a difficulty level before starting the game (e.g., Easy, Medium, Hard).
+* Questions should be appropriately harder or easier based on the selected level.
 
 #### User Story 3
-
+As a user, I want to earn rewards or badges for my performance to make the game more engaging and motivating.
 
 **Acceptance Criteria:**
-
+* The user can earn badges or rewards (e.g., "Streak Master" or "High Score").
+* These rewards should be displayed on the results screen.
 
 #### User Story 4
-
+As a user, I want to share my score on social media to challenge friends to beat it.
 
 **Acceptance Criteria:**
-
+* The user can share their score directly to social media platforms (e.g., Facebook, Twitter).
+* The shared post should include the user’s score and a link to the game.
 
 #### User Story 5
-
+As a user, I want to hear background music or sound effects to enhance the experience.
 
 **Acceptance Criteria:**
-
+* The game includes background music or sound effects during the quiz
+* The user can toggle sounds on or off.
 
 #### User Story 6
-
+As a user, I want to be able to create a custom avatar or profile for my account
 
 **Acceptance Criteria:**
-
+* The user can create and customize their avatar (e.g., by choosing an image or icon).
+* The avatar is displayed next to their score.
 
 #### User Story 7
-
+As a user, I want to see my past quiz scores over time so I can track my improvement.
 
 **Acceptance Criteria:**
-
+* The user can view a history of their past scores.
+* The game stores and displays their top scores or performance over time.
 
 #### User Story 8
-
+As a user, I want a daily challenge feature that offers new questions and rewards to keep me coming back.
 
 **Acceptance Criteria:**
-
-
+* The user can participate in a "Daily Challenge" that offers unique questions or rewards.
+* The challenge resets every day.
 
 ## Design Decisions
 
