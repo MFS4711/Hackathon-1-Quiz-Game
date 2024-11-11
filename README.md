@@ -1,5 +1,7 @@
 # Hackathon-1-Quiz-Game
 
+## Table of Contents
+
 ## Overview
 
 ### Purpose
@@ -196,6 +198,23 @@ As a user, I want a daily challenge feature that offers new questions and reward
 Include wireframes for key sections of your website.  
 Briefly describe the design choices, including layout, colour schemes, and fonts.  
 **Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
+
+#### Mobile View
+
+![Mobile View](assets/images/readme/Mobile.png)
+
+#### Tablet View
+
+![Tablet View](assets/images/readme/Tablet.png)
+
+#### Desktop/Laptop View
+
+![Desktop/Laptop View](assets/images/readme/Desktop.png)
+
+#### Larger Screens View
+
+![Larger Screens View](assets/images/readme/larger-screens-1.png)
+![Larger Screens View](assets/images/readme/larger-screens-2.png)
 
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
