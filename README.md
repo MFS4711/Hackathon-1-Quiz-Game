@@ -13,31 +13,168 @@ Identify the target audience for your website and explain why this audience will
 ## User Stories
 
 ### Must-Have User Stories
-- **User Story 1:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
 
-(Include all prioritized must-have features)  
-**Guidance:** Draft the user stories during Phase 1: Ideation & Initial Setup and update them as you complete Phase 2: Must User Stories Implementation & Testing. Document each must-have feature here along with its acceptance criteria.
+#### User Story 1
+As a user, I want to be able to start a new quiz game so I can begin answering questions.
+
+**Acceptance Criteria:**
+- There is a clear "Start Game" button on the main screen.
+- When clicked, the game begins, and the first question is displayed.
+- The game interface should reset to default before starting a new game (i.e., score set to 0, timer reset).
+
+#### User Story 2
+In order to play the quiz as user, I can view the True and False question
+
+**Acceptance Criteria:**
+- The game displays one True or False question at a time.
+- Each question includes the options "True" and "False."
+- The question text is legible and properly formatted.
+
+#### User Story 3
+In order to play the quiz as a user, I can User can select True or False as the answer.
+
+**Acceptance Criteria:**
+- The user can click either the "True" or "False" button to select an answer.
+- After selecting an answer, the button should visually indicate the choice (e.g., changing color or adding a checkmark).
+- The game should immediately process the answer and provide feedback.
+
+#### User Story 4
+In order to play the game as a user, I can get different questions within the same session.
+
+**Acceptance Criteria:**
+- Questions are selected randomly from a database or predefined set.
+- No question should be repeated within the same game session.
+
+#### User Story 5
+In order to play the game as a user, I can automatically end the game after a certain number of questions.
+
+**Acceptance Criteria:**
+- The game has a predefined number of questions (e.g., 10 questions).
+- After all questions are answered, the game automatically ends.
+
+#### User Story 6
+In order to end the game and see my final score as a user, I can end the game manually and get a message of my final score.
+
+**Acceptance Criteria:**
+- The user can click an "End Game" button to end the game manually.
+- The final score is displayed after ending the game.
+- The user can see a message like “Game Over” along with the total score.
+
+#### User Story 7
+In order to know my score as a user, I can be updated in real time after each question.
+
+**Acceptance Criteria:**
+- The score increases by 1 for each correct answer.
+- The score is displayed on the screen and updates in real-time after each question.
+
+#### User Story 8
+In order to have a feedback on my answer as a user, I can get an immediate message indicating if my answer is correct or incorrect.
+
+**Acceptance Criteria:**
+- After the user selects True or False, they receive immediate feedback indicating if their answer was correct or incorrect.
+- The feedback should be displayed clearly (e.g., "Correct!" in green, "Incorrect!" in red).
 
 ### Should-Have User Stories
-- **User Story 1:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
 
-(Include all prioritized should-have features)  
-**Guidance:** Document the secondary features that you aim to implement in Phase 3: Should User Stories Implementation & Any Advanced Features. Include clear acceptance criteria for each.
+#### User Story 1
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 2
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 3
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 4
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 5
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 6
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 7
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 8
+
+
+**Acceptance Criteria:**
+
+
 
 ### Could-Have User Stories
-- **User Story 1:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
 
-(Include any could-have features considered for future enhancements)  
-**Guidance:** Document any optional features that are nice to have but not essential.
+#### User Story 1
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 2
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 3
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 4
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 5
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 6
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 7
+
+
+**Acceptance Criteria:**
+
+
+#### User Story 8
+
+
+**Acceptance Criteria:**
+
+
 
 ## Design Decisions
 
