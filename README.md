@@ -77,53 +77,60 @@ In order to have a feedback on my answer as a user, I can get an immediate messa
 ### Should-Have User Stories
 
 #### User Story 1
-
+As a user, I want to have a countdown timer for each question soi can feel the pressure of time while answering
 
 **Acceptance Criteria:**
-
+* The timer counts down from a set time
+* If the timer runs out, the answer is marked as incorrect
+* the incorrect answer is added to the incorrect answers total
 
 #### User Story 2
-
+As a user, I want to know how many questions are remaining so I can pace myself.
 
 **Acceptance Criteria:**
-
+* The game displays the remaining amount of questions
+* the remaining question total reduces after each question
+* The visualisation is clear for the user
 
 #### User Story 3
-
+As a user, I want to be able to choose a category so i can play based on my interests or knowledge.
 
 **Acceptance Criteria:**
-
+*  the game provides the user with a selection of categories to choose from
 
 #### User Story 4
-
+As a user, I want to know how many correct answers I’ve gotten in a row to challenge myself to keep the streak going.
 
 **Acceptance Criteria:**
-
+* The game displays a counter which adds one for each correct answer
+* The streak counter resets to zero when with an incorrect answer
 
 #### User Story 5
-
+As a user, I want to review the questions I answered incorrectly at the end of the game to learn from my mistakes.
 
 **Acceptance Criteria:**
-
+* The game displays the correct answer to the user
 
 #### User Story 6
-
+As a user, I want to see a leaderboard that shows the highest scores so I can compete with others.
 
 **Acceptance Criteria:**
-
+* create a table that logs users and their scores
+* table displays scores in order from best to worst 
 
 #### User Story 7
-
+As a user, I want to have the option to play again right after finishing a game without having to navigate back to the main menu.
 
 **Acceptance Criteria:**
-
+* User can click a button at the end of the game to restart quiz
+* the button should re-start quiz and not navigate to main menu 
 
 #### User Story 8
-
+As a user, I want an option to get a short explanation or hint for a tricky question if I'm unsure about the answer.
 
 **Acceptance Criteria:**
-
-
+* provide a hint or help button for the user
+* the button displays a hint or solution
 
 ### Could-Have User Stories
 
