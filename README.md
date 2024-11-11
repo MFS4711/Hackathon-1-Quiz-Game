@@ -130,7 +130,7 @@ As a user, I want an option to get a short explanation or hint for a tricky ques
 
 **Acceptance Criteria:**
 * provide a hint or help button for the user
-* the button displays a hint or solution
+* the button displays a hint or solution.
 
 ### Could-Have User Stories
 
