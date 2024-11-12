@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // CONFIRMED: object is different for each button - SUCCESS
             console.log(object);
             // function to run the game should be below
-            runGame();
+            runGame(object);
           });
       } else if (
         this.getAttribute("data-type") === "true-btn" ||
@@ -80,6 +80,30 @@ function runGame (object) {
     endPage.style.removeProperty("display");
     endPage.style.display = "none";
   }
+
+  displayQuestion(object);
+
+}
+
+function displayQuestion (object) {
+
+    // Display Question
+    const displayQuestion = document.getElementById("question");
+    displayQuestion.innerText = object.results[0].question;
+    // console.log(object.results[0].question);
+
+    
+}
+
+/**
+ * This function should check which answer was clicked and indicate if the answer was correct
+ */
+function checkAnswer() {
+
   
+
+}
+
+function nextQuestion() {
 
 }
