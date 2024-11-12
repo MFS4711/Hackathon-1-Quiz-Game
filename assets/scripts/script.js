@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const gameState = {
     questionIndex: 0,
     questionNumber: 1,
+    score: 0,
   };
 
   const apiURL = `https://opentdb.com/api.php?amount=10&category=9&type=boolean`;
@@ -101,6 +102,10 @@ function runGame(gameState) {
   // let questionIndex = 0;
   // const questionSet = object.results;
 
+  // display score is 0
+  const currentScore = document.getElementById("current-score");
+  currentScore.innerText = gameState.score;
+
   displayQuestion(gameState);
 }
 
@@ -139,9 +144,21 @@ function displayQuestion(gameState) {
 function checkAnswer(button, gameState) {
 
   const currentQuestion = gameState.questionSet[gameState.questionIndex].question;
-  console.log(currentQuestion);
-  
+  const selectedAnswer = button.innerText;
+  const correctAnswer = gameState.questionSet[gameState.questionIndex].correct_answer;
 
+  const feedbackMessage = document.getElementById("feedback");
+  const currentScore = document.getElementById("current-score");
+
+  if (selectedAnswer === correctAnswer) {
+    // increment score
+    gameState.score++;
+    currentScore.innerText = gameState.score;
+    // Feedback message using innertext or innerHTML
+    feedbackMessage.innerText = "Well Done!!! That was the correct answer";
+  } else {
+    feedbackMessage.innerText = `That was incorrect. The correct answer was ${correctAnswer}`;
+  }
 
 }
 
