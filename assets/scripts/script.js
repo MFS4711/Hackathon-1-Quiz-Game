@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
   quizPage.style.display = "none";
   endPage.style.display = "none";
 
+  // Store starting point of game variables in an object.
+  const gameState = {
+    questionIndex: 0,
+    questionNumber: 1,
+  };
+
   const apiURL = `https://opentdb.com/api.php?amount=10&category=9&type=boolean`;
 
   // Add Event Listeners to buttons
@@ -31,19 +37,25 @@ document.addEventListener("DOMContentLoaded", function () {
           })
           .then(function (object) {
             // CONFIRMED: object is different for each button - SUCCESS
-            console.log(object);
+            // console.log(object);
+            // Add questions to gameSet object
+            gameState.questionSet = object.results;
+            // console.log("gameState:", gameState);
             // function to run the game should be below
-            runGame(object);
+            runGame(gameState);
           });
       } else if (
         this.getAttribute("data-type") === "true-btn" ||
         this.getAttribute("data-type") === "false-btn"
       ) {
         //   function that checks the answer
-        checkAnswer(this);
+        checkAnswer(this, gameState);
+
         // function that displays feedback
       } else if (this.getAttribute("data-type") === "next-question-btn") {
         // function which gets next question
+        console.log("gameState:", gameState);
+        nextQuestion(gameState);
       }
     });
   }
@@ -57,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * This Function should remove the divs containing the first page and end page, only displaying the ques
  */
-function runGame(object) {
+function runGame(gameState) {
   // Hide the start game and play again page
   // Make the question area page visible
 
@@ -79,12 +91,12 @@ function runGame(object) {
     endPage.style.display = "none";
   }
 
-  // Store starting point of game variables in an object.
-  const gameState = {
-    questionIndex: 0,
-    questionNumber: 1,
-    questionSet: object.results,
-  };
+  // // Store starting point of game variables in an object.
+  // const gameState = {
+  //   questionIndex: 0,
+  //   questionNumber: 1,
+  //   questionSet: object.results,
+  // };
 
   // let questionIndex = 0;
   // const questionSet = object.results;
@@ -98,17 +110,20 @@ function runGame(object) {
 function displayQuestion(gameState) {
   console.log("index:", gameState.questionIndex);
   console.log("Number:", gameState.questionNumber);
-  console.log("Api object:",gameState.questionSet);
+  console.log("Api object:", gameState.questionSet);
 
   // Hide the next question button
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.style.display = "none";
 
   // display the question
-  const questionELement = document.getElementById("question");
+  const questionElement = document.getElementById("question");
 
-  const currentQuestion = gameState.questionSet[gameState.questionIndex.question];
+  const currentQuestion =
+    gameState.questionSet[gameState.questionIndex].question;
   // console.log("question:", gameState.questionSet[gameState.questionIndex].question);
+
+  questionElement.innerText = currentQuestion;
 
   //   if (questionIndex < questionSet.length - 1) {
   //     const displayQuestion = document.getElementById("question");
@@ -121,6 +136,13 @@ function displayQuestion(gameState) {
 /**
  * This function should check which answer was clicked and indicate if the answer was correct
  */
-function checkAnswer(button) {}
+function checkAnswer(button, gameState) {
 
-function nextQuestion() {}
+  const currentQuestion = gameState.questionSet[gameState.questionIndex].question;
+  console.log(currentQuestion);
+  
+
+
+}
+
+function nextQuestion(gameState) {}
