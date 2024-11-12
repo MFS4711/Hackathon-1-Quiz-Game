@@ -1,40 +1,71 @@
-<<<<<<< HEAD
-/* sample Styling for first page */
 
-/*body {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content:space-between;
-
-height: 100vh;
-width:100%
-
+/* Styling for first page */
+body{
+  background-color: black;
 }
 
-h1{
-  margin-top: 25px;
-  height: 80px;
+#first-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
+  background-color: aqua;
 }
 
-.instructions-container{
-  border: 5px solid black;
-  width: 50%;
-  height: 150px;
+
+.header-container{
+
+  margin-top: 20px;
+  background-color: aquamarine;
+
   text-align: center;
 
 }
 
-#start-button{
+
+.instructions-container{
+  padding-top: 10px;
+  border: 5px solid black;
+  width: 50%;
+  height: 150px;
+  text-align: center;
+  font-size: 15px;
   
+background-color: blueviolet;
+
+}
+
+#start-button{
+    font-size: 20px;
     height: 80px;
     border-radius: 15px;
     width: 120px;
     margin-bottom: 20px;
 }
 
-*/
-=======
+
+  footer{
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly; 
+  font-size: 15px;
+  height: 10vh;
+  margin-bottom: 30px;
+}
+  
+  
+
+
+  
+
+
+
+
+/*
+
 body {
     text-align: center;
     font-family: 'Roboto Condensed',sans-serif;
@@ -44,4 +75,4 @@ body {
     justify-content: center;
     height: 75vh;
 }
->>>>>>> main
+*/
