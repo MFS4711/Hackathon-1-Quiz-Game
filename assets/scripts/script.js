@@ -92,19 +92,14 @@ function runGame(gameState) {
     endPage.style.display = "none";
   }
 
-  // // Store starting point of game variables in an object.
-  // const gameState = {
-  //   questionIndex: 0,
-  //   questionNumber: 1,
-  //   questionSet: object.results,
-  // };
-
-  // let questionIndex = 0;
-  // const questionSet = object.results;
-
+  // SOMETHING TO THINK ABOUT - maybe reset the below score and number when play again?
   // display score is 0
   const currentScore = document.getElementById("current-score");
   currentScore.innerText = gameState.score;
+
+  // display question number is 1
+  const questionNumberElement = document.getElementById("question_number");
+  questionNumberElement.innerText = gameState.questionNumber;
 
   displayQuestion(gameState);
 }
@@ -113,13 +108,17 @@ function runGame(gameState) {
  * This function should hide the next question button and display the question.
  */
 function displayQuestion(gameState) {
-  console.log("index:", gameState.questionIndex);
-  console.log("Number:", gameState.questionNumber);
-  console.log("Api object:", gameState.questionSet);
+  // console.log("index:", gameState.questionIndex);
+  // console.log("Number:", gameState.questionNumber);
+  // console.log("Api object:", gameState.questionSet);
 
   // Hide the next question button
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.style.display = "none";
+
+  // display the question number
+  const questionNumberElement = document.getElementById("question_number");
+  questionNumberElement.innerText = gameState.questionNumber;
 
   // display the question
   const questionElement = document.getElementById("question");
@@ -130,12 +129,6 @@ function displayQuestion(gameState) {
 
   questionElement.innerText = currentQuestion;
 
-  //   if (questionIndex < questionSet.length - 1) {
-  //     const displayQuestion = document.getElementById("question");
-  //     displayQuestion.innerText = object.results[questionIndex].question;
-  //   }
-
-  //   nextQuestion();
 }
 
 /**
@@ -154,12 +147,56 @@ function checkAnswer(button, gameState) {
     // increment score
     gameState.score++;
     currentScore.innerText = gameState.score;
+    // decrease questions remaining - TO BE ADDED
+
     // Feedback message using innertext or innerHTML
     feedbackMessage.innerText = "Well Done!!! That was the correct answer";
   } else {
     feedbackMessage.innerText = `That was incorrect. The correct answer was ${correctAnswer}`;
   }
 
+  // Disable Answer Buttons to ensure they can't be clicked whilst answer is being checked
+  disableAnswerButtons();
+
+  // Display Next Quesion Button
+  const nextButton = document.getElementById("btn_nextquestion");
+  nextButton.style.display = "inline-block";
+
 }
 
-function nextQuestion(gameState) {}
+function nextQuestion(gameState) {
+
+  // remove feedback message
+  const feedbackMessage = document.getElementById("feedback");
+  feedbackMessage.innerText = "";
+
+  // increment index and question number
+  gameState.questionIndex++;
+  gameState.questionNumber++;
+
+  if (gameState.questionIndex < gameState.questionSet.length) {
+    displayQuestion(gameState);
+    enableAnswerButtons();
+  } else {
+    endGame(gameState);
+  }
+}
+
+/**
+ * This function should disable the answer buttons - true and false to prevent multiple clicks in a round
+ */
+function disableAnswerButtons() {
+
+}
+
+/**
+ * This function should enable the answer buttons - true and false in preparation for the next question
+ */
+function enableAnswerButtons() {
+
+}
+
+function endGame(gameState) {
+  
+  // Final page should now be visible and all other pages removed
+}
