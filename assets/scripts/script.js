@@ -7,15 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
   // - Next Question button displays the next question
   // - True or False buttons are answer buttons
 
-  fetch(apiURL) // retrieve all data from this url
+  let buttons = document.getElementsByTagName("button");
+for (let button of buttons) {
+  button.addEventListener("click", function () {
+
+    if (this.getAttribute("data-type") === "start-btn" || this.getAttribute("data-type") === "play-again-btn") {
+
+    // This will generate the object with quiz questions - play again gives a new random set
+    fetch(apiURL) 
     .then(function (response) {
-      // this gets called when the fetch function returns its data
-      return response.json(); // convert the relevant part of the page to a JS object
-    })
-    .then(function (object) {
-      // this gets called when the conversion is complete
+      return response.json(); 
+    }) .then(function (object) {
       console.log(object);
     });
+    } 
+    else if (this.getAttribute("data-type") === "true-btn" || this.getAttribute("data-type") === "false-btn") {
+    //   function that checks the answer
+    // function
+    }
+  });
+}
+
 });
 
 // Api already gives random questions
@@ -23,16 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
 // Need a function to increment score
 // Need a function to countdown questions left
 
-let buttons = document.getElementsByTagName("button");
-for (let button of buttons) {
-  button.addEventListener("click", function () {
-    if (this.getAttribute("data-type") === "start-game" || this.getAttribute("data-type") === "play-again") {
-    // function that starts the game
-    // function that creates the question list
-    // function which applies the first question
-    } else if (this.getAttribute("data-type") === "true" || this.getAttribute("data-type") === "false") {
-    //   function that checks the answer
-    // function
-    }
-  });
-}
+
