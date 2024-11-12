@@ -74,6 +74,7 @@ function runGame(gameState) {
   // Hide the start game and play again page
   // Make the question area page visible
 
+  // SOMETHING TO THINK ABOUT - separate function can be used for the page logic - can use switch case?
   const openingPage = document.getElementById("first-page");
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
