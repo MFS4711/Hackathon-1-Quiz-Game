@@ -1,7 +1,7 @@
 
 /* General Styling */
 body{
-  background-color:#fafafa;
+  background-color:rgba(239, 214, 245, 0.133);
   max-height: 90vh;
 }
 
@@ -52,19 +52,20 @@ background-color: blueviolet;
 /* ----------Game Area-----------------**/
 .heading{
   display: inline;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-align: center;
   color:#333;
   border-radius: 15px;
-  border:2px solid #a0522d;
+  border:2px solid #3D3B8E;
   text-align:center;
+  position: absolute;
 }
 .questions-container{
   position: relative;
   width: 80%;
-  height: 80vh;
+  height: 60vh;
   background-color: rgba(255, 255, 255, 0.9);
-  border: 3px solid #a0522d;
+  border: 3px solid #3D3B8E;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
@@ -72,13 +73,14 @@ background-color: blueviolet;
 
 .score-container{
   position: relative;
-    width: 80%;
+    width: 40%;
     height: 15vh;
     background-color: rgba(255, 255, 255, 0.9);
-    border: 3px solid #a0522d;
+    border: 3px solid #3D3B8E;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
 }
 #btn_area{
   position: absolute;
@@ -86,15 +88,38 @@ background-color: blueviolet;
   left:50%;
   transform: translate(-50%,-50%);
 }
+#true_btn:hover{
+   background-color: #45a049;
+}
+#false_btn:hover{
+background-color: #e53935;
+}
 #btn_nextquestion{
 align-self: center;
 margin-top: auto;
 padding: 10px 20px;
+background-color: #3D3B8E;
+color:#fafafa;
 }
 
+#feedback{
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+  background-color: #c7c6fc;
+}
 
-
-
+#question-id{   
+    border: 3px solid #560ffd;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: absolute;
+}
+#question{
+  background-color: #bbbaec;
+  text-align: center;
+}
 
 
 
@@ -117,15 +142,14 @@ padding: 10px 20px;
   
 }*/
 footer {
-  background-color: #333;
+  background-color:#3D3B8E;
   color: #fff;
   display:block;
   position:relative;
   padding: 10px 0;
-  bottom: 0;
   width:100%;
   height:100px;
-  margin-top: 20px;
+  margin-top: 90px;
 }
 #gitHub {
   text-align: center;
@@ -137,6 +161,9 @@ footer {
 #gitHub li {
   list-style-type: none;
 }
+#gitHub li:hover{
+  color:#333;
+}
 footer p {
   text-align: left;
   font-size: 0.7rem;
@@ -144,7 +171,7 @@ footer p {
 }
 
 #gitHub li a {
-  color: #6b6b6b;
+  color: #fafafa;
   font-size: 1.5rem;
 }
 
