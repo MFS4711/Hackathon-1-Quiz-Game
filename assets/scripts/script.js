@@ -126,17 +126,16 @@ function displayQuestion(gameState) {
   const questionNumberElement = document.getElementById("question_number");
   questionNumberElement.innerText = gameState.questionNumber;
 
-  // display the question
-  const questionElement = document.getElementById("question");
-
   // display questions remaining
   const questionsRemainingElement = document.getElementById("questions-left");
   questionsRemainingElement.innerText = gameState.questionsRemaining;
 
+  // display the question
   const currentQuestion =
     gameState.questionSet[gameState.questionIndex].question;
   // console.log("question:", gameState.questionSet[gameState.questionIndex].question);
 
+  const questionElement = document.getElementById("question");
   questionElement.innerText = currentQuestion;
 }
 
