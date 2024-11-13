@@ -1,40 +1,168 @@
-<<<<<<< HEAD
-/* sample Styling for first page */
 
-/*body {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content:space-between;
+/* General Styling */
 
-height: 100vh;
-width:100%
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body{
+ height: 80vh;
+ background-color: black;
+ width: 100%;
 
 }
 
-h1{
-  margin-top: 25px;
-  height: 80px;
+a {
+  color: white
 }
+
+
+
+ 
+/* First page CSS */
+#first-page{
+  
+  background-image: url(../images/site-images/books-1204029_1280.jpg);
+  background-color: gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 83vh;
+  width: 100%;
+  
+
+
+}
+
+#quiz-title{
+ 
+  text-align: center;
+  background-color:#3D3B8E;
+  font-family: "Quantico",sans-serif;
+  color: white;
+  width: 100%;
+}
+
 
 .instructions-container{
-  border: 5px solid black;
+  
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
   width: 50%;
-  height: 150px;
+  height: 180px;
   text-align: center;
+  font-size: 15px;
+  background-color:#3D3B8E;
+  opacity: 0.9;
+  color: white;
+  font-family: "Quantico",sans-serif
+
 
 }
 
 #start-button{
-  
+  border: 2px solid black;
+    font-size: 20px;
     height: 80px;
     border-radius: 15px;
     width: 120px;
     margin-bottom: 20px;
+    background-color: #3D3B8E;
+    color: white;
 }
 
-*/
-=======
+@media  (min-width:576px) {
+
+    .instructions-container{
+      font-size: 20px;
+      padding-top: 10px;
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 50%;
+      height: 200px;
+      text-align: center;
+      background-color:#3D3B8E;
+      opacity: 0.9;
+      color: white;
+      font-family: "Quantico",sans-serif;
+  
+    }
+  }
+
+
+  @media  (min-width:769px) {
+
+    .instructions-container{
+      font-size: 25px;
+      padding-top: 10px;
+      border: 2px solid black;
+      border-radius: 10px;
+      width: 50%;
+      height: 200px;
+      text-align: center;
+      background-color:#3D3B8E;
+      opacity: 0.9;
+      color: white;
+      font-family: "Quantico",sans-serif;
+  
+    }
+    
+    }
+/*----------Game Area----------------->
+
+
+
+
+
+
+
+
+
+
+
+/* ----footer----------- */
+  footer{
+  
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-top: 5px;
+  flex-direction: row;
+
+  justify-content:space-around; 
+  font-size: 15px;
+  background-color:#3D3B8E;
+  font-family: Arial, Helvetica, sans-serif;
+
+  ;
+
+  
+}
+
+
+  @media (min-width: 368px) {
+   
+
+  #first-page{ 
+    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  width: 100%;
+    
+  }
+  }
+
+
+
+/*
+
 body {
     text-align: center;
     font-family: 'Roboto Condensed',sans-serif;
@@ -44,4 +172,4 @@ body {
     justify-content: center;
     height: 75vh;
 }
->>>>>>> main
+*/

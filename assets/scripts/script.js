@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
 
-  openingPage.style.display = "block";
+  openingPage.style.display = "flex";
   quizPage.style.display = "none";
   endPage.style.display = "none";
 
