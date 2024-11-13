@@ -37,8 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
           })
           .then(function (object) {
-            // CONFIRMED: object is different for each button - SUCCESS
-            // console.log(object);
+            console.log(object);
             // Add questions to gameSet object
             gameState.questionSet = object.results;
             gameState.questionsRemaining = gameState.questionSet.length;
@@ -56,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // function that displays feedback
       } else if (this.getAttribute("data-type") === "next-question-btn") {
         // function which gets next question
-        console.log("gameState:", gameState);
+        // console.log("gameState:", gameState);
         nextQuestion(gameState);
       }
     });
