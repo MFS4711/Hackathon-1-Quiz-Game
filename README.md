@@ -1,8 +1,14 @@
 # Hackathon-1-Quiz-Game
 
-**| [MFS4711](https://github.com/MFS4711) |** **| [ajswanswick](https://github.com/ajswanwick) |** **| [Mery369](https://github.com/Mery369) |** **| [](https://github.com/) |**
+ ***<p style="text-align:center;">HTML / CSS / JavaScript</p>***
+
+ ***<p style="text-align:center;"> **| [MFS4711](https://github.com/MFS4711) |** **| [ajswanswick](https://github.com/ajswanwick) |** **| [Mery369](https://github.com/Mery369) |** **| [](https://github.com/) |** </p>***
 
 ## Table of Contents
+1. [Overview](#overview)
+    - [Purpose](#purpose)
+    - [Target Audience](#target-audience)
+2. []()
 
 ## Overview
 
@@ -201,22 +207,35 @@ Include wireframes for key sections of your website.
 Briefly describe the design choices, including layout, colour schemes, and fonts.  
 **Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
 
+The Wireframes were produced during the ideation phase of this project. They were designed with the user in mind and to ensure the webpage was simplistic and functional as the purpose of the webpage is to provide a fun educational experience. The website layout appears slightly differently on smaller screens compared with larger. 
+
 #### Mobile View
 
 ![Mobile View](assets/images/readme/Mobile.png)
+
+On a Mobile, it was the teams intention to open with a clear page displaying the webpage title, the instructions on how to play and a start button. This linear layout makes it easy for the user to follow along with the flow of the page. After clicking the start button, a new page appears which would be the game area. This contains a question at the top of the page, answer buttons in the middle with some feedback below and a score area. This provides the user all the information they need to play the quiz. Upon completing the quiz, the final score page will appear to provide a summary of the questions answered as well as the ability to play again.
+
+A specific on Mobile to note is that the answer buttons will be displayed as blocks, one on top of the other.
 
 #### Tablet View
 
 ![Tablet View](assets/images/readme/Tablet.png)
 
+This is very similar to the layout of the mobile view, the major difference being the appearance of the answer buttons. They will appear side by side to take up the space in the tablet view.
+
+
 #### Desktop/Laptop View
 
 ![Desktop/Laptop View](assets/images/readme/Desktop.png)
+
+This is very similar to the tablet view, the only difference being that the content is making more use of the space.
 
 #### Larger Screens View
 
 ![Larger Screens View](assets/images/readme/larger-screens-1.png)
 ![Larger Screens View](assets/images/readme/larger-screens-2.png)
+
+The layout follows the laptop view but there should be a container which stops the content growing at a certain point.
 
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
