@@ -213,26 +213,50 @@ function disableAnswerButtons() {}
 function enableAnswerButtons() {}
 
 function endGame(gameState) {
+
+  // Final page should now be visible and all other pages removed
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
 
-  // Final page should now be visible and all other pages removed
   if (quizPage.style.display === "block") {
     quizPage.style.removeProperty("display");
     quizPage.style.display = "none";
   }
-
   if (endPage.style.display === "none") {
     endPage.style.removeProperty("display");
     endPage.style.display = "block";
   }
+
+  // Display final Score
+  const finalScore = document.getElementById("final-score");
+  finalScore.innerText = ` ${gameState.score} / ${gameState.questionSet.length}`;
+  console.log(gameState.score/gameState.questionSet.length);
+
+  // Display a different message depending on the score
+  const finalMessage = document.getElementById("final-message")
+  if (gameState.score/gameState.questionSet.length === 1) {
+    finalMessage.innerText = `You did it! A perfect score of ${gameState.score}/${gameState.questionSet.length}. Truly outstanding work!`;
+  } else if (gameState.score/gameState.questionSet.length >= 0.8) {
+    finalMessage.innerText = `Awesome! You scored ${gameState.score}/${gameState.questionSet.length} you're in the top tier of quiz masters! Keep it up!`;
+  } else if (gameState.score/gameState.questionSet.length >= 0.6) {
+    finalMessage.innerText = `You're doing great! With ${gameState.score}/${gameState.questionSet.length}, you're almost there. Just a bit more and you'll hit the top!`;
+  } else if (gameState.score/gameState.questionSet.length >= 0.4) {
+    finalMessage.innerText = `Not bad! You scored ${gameState.score}/${gameState.questionSet.length}. You're getting there—keep practicing, and you'll improve!`;
+  } else if (gameState.score/gameState.questionSet.length >= 0.2) {
+    finalMessage.innerText = `It's a start! You scored ${gameState.score}/${gameState.questionSet.length}, but don't worry, every quiz is a chance to learn and improve!`;
+  } else if (gameState.score/gameState.questionSet.length >= 0) {
+    finalMessage.innerText = `You got some right! ${gameState.score}/${gameState.questionSet.length} means you're on the board. Great start—keep going`;
+  } else {
+    finalMessage.innerText = `Don't worry, everyone starts somewhere! You scored ${gameState.score}/${gameState.questionSet.length}, but you've got this—try again and see how much you can improve!`;
+  }
+  
 
   // Reset gameState object
   gameState.questionNumber = 1;
   gameState.questionIndex = 0;
   gameState.score = 0;
 
-  // Reset Next Quesion text
+  // Reset Next Question text
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.innerText = "Next Question";
 }
