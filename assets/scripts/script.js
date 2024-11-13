@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Add questions to gameSet object
             gameState.questionSet = object.results;
             gameState.questionsRemaining = gameState.questionSet.length;
-            console.log("gameState:", gameState);
+            // console.log("gameState:", gameState);
             // function to run the game should be below
             runGame(gameState);
           });
@@ -227,4 +227,13 @@ function endGame(gameState) {
     endPage.style.removeProperty("display");
     endPage.style.display = "block";
   }
+
+  // Reset gameState object
+  gameState.questionNumber = 1;
+  gameState.questionIndex = 0;
+  gameState.score = 0;
+
+  // Reset Next Quesion text
+  const nextButton = document.getElementById("btn_nextquestion");
+  nextButton.innerText = "Next Question";
 }
