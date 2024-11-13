@@ -132,8 +132,8 @@ function displayQuestion(gameState) {
 
   // display the question
   const currentQuestion =
-    gameState.questionSet[gameState.questionIndex].question;
-  // console.log("question:", gameState.questionSet[gameState.questionIndex].question);
+    gameState.questionSet[gameState.questionIndex].question.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
+  console.log("question:", currentQuestion);
 
   const questionElement = document.getElementById("question");
   questionElement.innerText = currentQuestion;
