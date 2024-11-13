@@ -373,11 +373,19 @@ In regards to the final product created, this has incorporated all the must-have
 Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
 **Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
 
+### Educational Sources
 There were many sources used for educational purposes during the course of this project to not only aid in refreshing previous content covered in HTML, CSS and JavaScript, but also provided a platform to enhance our knowledge further.
 
 Educational resources used include [Code Institute](https://codeinstitute.net/), [W3Schools](https://www.w3schools.com/) and [MDN Web Docs](https://developer.mozilla.org/en-US/).
 
 Use of ChatGPT supported clarification of coding issues faced as well as providing suggestions for improvement.
+
+### Image Sources
+
+
+### Icons/Styles
+- [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [Font Awesome](https://fontawesome.com/)
 
 ## Future Improvements
 Briefly discuss potential future improvements or features that could be added to the project.  
