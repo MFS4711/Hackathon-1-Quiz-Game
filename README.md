@@ -5,10 +5,16 @@
  ***<p style="text-align:center;"> **| [MFS4711](https://github.com/MFS4711) |** **| [ajswanswick](https://github.com/ajswanwick) |** **| [Mery369](https://github.com/Mery369) |** **| [](https://github.com/) |** </p>***
 
 ## Table of Contents
-1. [Overview](#overview)
-    - [Purpose](#purpose)
-    - [Target Audience](#target-audience)
-2. []()
+
+ 1. [Overview](#overview)
+     - [Purpose](#purpose)
+     - [Target Audience](#target-audience)
+ 2. [User Stories](#user-stories)
+     - [Must-Have User Stories](#must-have-user-stories)
+     - [Should-Have User Stories](#should-have-user-stories)
+     - [Could-Have User Stories](#could-have-user-stories)
+ 3. [Design Decisions](#design-decisions)
+     - [Wireframes](#wireframes)
 
 ## Overview
 
@@ -207,7 +213,7 @@ Include wireframes for key sections of your website.
 Briefly describe the design choices, including layout, colour schemes, and fonts.  
 **Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
 
-The Wireframes were produced during the ideation phase of this project. They were designed with the user in mind and to ensure the webpage was simplistic and functional as the purpose of the webpage is to provide a fun educational experience. The website layout appears slightly differently on smaller screens compared with larger. 
+The Wireframes were produced during the ideation phase of this project. They were designed with the user in mind and to ensure the webpage was simplistic and functional as the purpose of the webpage is to provide a fun educational experience. The layout was constructed to make use of the space as the viewport grew up to a point, 1440px, and so the content appeared differently on mobiles compared to larger screens.
 
 #### Mobile View
 
@@ -237,15 +243,24 @@ This is very similar to the tablet view, the only difference being that the cont
 
 The layout follows the laptop view but there should be a container which stops the content growing at a certain point.
 
+### Colours
+
+#### A particular colour (#hexcode)
+
+#### Another colour (#hexcode)
+
+#### etc.
+
+### Fonts
+
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
 **Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
-## AI Tools Usage
+#### Colour Contrast
+The team ensured to adhere to accessibility guidelines by using the combinations of colours we picked. We used [Coolers Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) to examine the colours used during the project.  Below you will find the results of the various contrast checks we completed where we compared the background colour with the foreground content:
 
-### DALL-E
-Describe how DALL-E was used for image generation, including examples of successes and challenges.  
-**Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
+#### Screen Reader Accessibility
 
 ## Features Implementation
 
@@ -262,11 +277,8 @@ Describe how DALL-E was used for image generation, including examples of success
 - **Feature 2:** Review Incorrect Answers: Users can review their incorrect answers at the end of the game to learn from their mistakes (User Story 5).
 - **Feature 3:** Play Again Option: A "Play Again" button allows users to restart the quiz without navigating to the main menu (User Story 7).
 
-## AI Tools Usage
-
-### GitHub Copilot
-Describe how GitHub Copilot assisted in coding, including any challenges or adjustments needed.  
-**Guidance:** Reflect on how GitHub Copilot assisted in coding, particularly any challenges or adjustments that were needed to align with project goals.
+### Optional Features (Could-Haves)
+These User Stories as well as some of the should-have user stories were not implemented primarily due to time constraints but also due to the current lack of the necessary skillset to design these aspects such as the personalisation aspect.
 
 ## Testing and Validation
 
@@ -275,29 +287,52 @@ Summarize the results of testing across different devices and screen sizes.
 Mention any issues found and how they were resolved.  
 **Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
 
+### Testing Results
+
+#### Bug Fixes
+
+#### Responsiveness
+
 ### Validation
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
 Include the results of the validation process.  
 **Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
 
-## AI Tools Usage
+#### HTML Validation
+HTML validation was achieved using the [W3C Validator](https://validator.w3.org/) which ensured the code met web standards.
 
-### GitHub Copilot
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
+#### CSS Validation
+CSS validation was achieved using the [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) which ensured the code met web standards.
+
+#### JavaScript Validation
+Although there was not a specific JavaScript validator for web standards, we used a version of [JSHint](https://mfs4711.github.io/jshint-api/) which was created during a walkthrough session in a previous Code Institute module. This suggested only one potential error when the code was input. A screenshot of this is shown below.
+
+![JS Validation](assets/images/readme/JS-validation.png)
 
 ## Deployment
 
 ### Deployment Process
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
-**Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
+
+The project was deployed early in the process to GitHub Pages to ensure any issues encountered could be resolved quickly.
+Before deploying the project, We ensured to code the basic structure in HTML and CSS, and some basic JavaScript to ensure everything was working in unison.
+The project was deployed via GitHub Pages which was accessed via the settings in the project repository. 
+This involved publishing the main branch and root directory which took a few minutes before completing.
+The deployed project updated as required after each git push and few, if any, issues were encountered.
+
+### File Structure
+The root directory is structured in a way that is clear an organised. This is separated into an assets folder and the index.html file as well as this README.md file.
+
+In the assets folder, the images folder has been split into clear, logical folders, each enclosing images to be applied to the location of the folder name. This is particularly important as there are a large number of images used in the project and so having a single image file would make it difficult to read. Also, in this way, the relative image file paths, included in the html, can be followed easily.
+
+Further to this, as per convention, in the assets folder, along with the image folder, there is a styles folder, which contains all css stylesheets used. In this project there was only one used, however, if there were more these would be easily found here. The same is true for the scripts folder containing the javascript which is also found in the assets folder.
+
+This file structure allows for easy navigation and reading for anyone attempting to read the code. 
 
 ## AI Tools Usage
 
-### Reflection
-Describe the role AI tools played in the deployment process, including any benefits or challenges.  
-**Guidance:** Reflect on how AI tools assisted with the deployment process, particularly how they streamlined any tasks or presented challenges.
+### ChatGPT
+
+ChatGPT was used to provide both coding support and during the ideation phase. First of all, it was used for brainstorming ideas and producing layout concepts. Further to this, it was used to generate many user stories which have been used in the development of this project. Furthermore, it was used, at times, to provide coding support to help identify the code which was causing a particular bug. Challenges with this AI software included the need to ask the right questions as it can take the topic in an unintended direction, therefore, it was important to keep on top of this. Further to this, ChatGPT can make mistakes which would be easy to overlook without knowledge of the coding concept. An example of this would be an issue faced when trying to pass information from one function into another. ChatGPT suggested calling a variable declared in one function in a different function which would not be possible as variables are block scoped. Therefore, whilst an AI tool such as this can provide great benefits in finding solutions to problems, it can just as easily confidently make mistakes which can be tough to catch.
 
 ## Reflection on Development Process
 
