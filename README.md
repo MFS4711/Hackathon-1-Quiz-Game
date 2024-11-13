@@ -15,6 +15,23 @@
      - [Could-Have User Stories](#could-have-user-stories)
  3. [Design Decisions](#design-decisions)
      - [Wireframes](#wireframes)
+     - [Colours](#colours)
+     - [Fonts](#fonts)
+ 4. [Features Implementation](#features-implementation)
+     - [Core Features (Must-Haves)](#core-features-must-haves)
+     - [Advanced Features (Should-Haves)](#advanced-features-should-haves)
+     - [Optional Features (Could-Haves)](#advanced-features-should-haves)
+ 5. [Testing and Validation](#testing-and-validation)
+     - [Testing Results](#testing-results)
+     - [Validation](#validation)
+ 6. [Deployment](#deployment)
+     - [Deployment Process](#deployment-process)
+     - [File Structure](#file-structure)
+ 7. [AI Tools Usage](#ai-tools-usage)
+     - [ChatGPT](#chatgpt)
+ 8. [Reflection on Development Process](#reflection-on-development-process)
+ 9. [Code Attribution](#code-attribution)
+ 10. [Future Improvements](#future-improvements)
 
 ## Overview
 
