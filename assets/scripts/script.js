@@ -205,12 +205,23 @@ function nextQuestion(gameState) {
 /**
  * This function should disable the answer buttons - true and false to prevent multiple clicks in a round
  */
-function disableAnswerButtons() {}
+function disableAnswerButtons() {
+  const answerButtons = document.querySelectorAll(
+    "button[data-type='true-btn'], button[data-type='false-btn']"
+  );
+  // for each allows each array element to be acted on
+  answerButtons.forEach((button) => (button.disabled = true));
+}
 
 /**
  * This function should enable the answer buttons - true and false in preparation for the next question
  */
-function enableAnswerButtons() {}
+function enableAnswerButtons() {
+  const answerButtons = document.querySelectorAll(
+    "button[data-type='true-btn'], button[data-type='false-btn']"
+  );
+  answerButtons.forEach((button) => (button.disabled = false));
+}
 
 function endGame(gameState) {
   // Final page should now be visible and all other pages removed
@@ -251,7 +262,7 @@ function endGame(gameState) {
 
   // Display questions and answers
   const finalPageQandA = document.getElementById("quiz-end-questions");
-  
+
   for (let i = 0; i < gameState.questionSet.length; i++) {
     const question = gameState.questionSet[i].question;
     const answer = gameState.questionSet[i].correct_answer;
