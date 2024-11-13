@@ -1,9 +1,8 @@
 
 /* General Styling */
 body{
-  background-color:#d8409b;
+  background-color:#fafafa;
   max-height: 90vh;
-
 }
 
 a {
@@ -43,18 +42,55 @@ text-align: center;
 background-color: blueviolet;
 
 }
-
 #start-button{
-    font-size: 20px;
-    height: 80px;
-    border-radius: 15px;
-    width: 120px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  height: 20px;
+  border-radius: 15px;
+  width: 120px;
+  margin-bottom: 20px;
+}
+/* ----------Game Area-----------------**/
+.heading{
+  display: inline;
+  padding: 10px 20px;
+  text-align: center;
+  color:#333;
+  border-radius: 15px;
+  border:2px solid #a0522d;
+  text-align:center;
+}
+.questions-container{
+  position: relative;
+  width: 80%;
+  height: 80vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 3px solid #a0522d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/*----------Game Area----------------->
-
-
+.score-container{
+  position: relative;
+    width: 80%;
+    height: 15vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 3px solid #a0522d;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+#btn_area{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+#btn_nextquestion{
+align-self: center;
+margin-top: auto;
+padding: 10px 20px;
+}
 
 
 
@@ -65,7 +101,7 @@ background-color: blueviolet;
 
 
 /* ----footer----------- */
-  footer{
+ /* footer{
   
   width: 100%;
   display: flex;
@@ -74,15 +110,43 @@ background-color: blueviolet;
   font-size: 15px;
   height: 5vh;
   margin-bottom: 30px;
-  background-color:#d8409b;
+  background-color:#444;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   
+}*/
+footer {
+  background-color: #333;
+  color: #fff;
+  display:block;
+  position:relative;
+  padding: 10px 0;
+  bottom: 0;
+  width:100%;
+  height:100px;
+  margin-top: 20px;
+}
+#gitHub {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+  margin-bottom: -8px;
+}
+#gitHub li {
+  list-style-type: none;
+}
+footer p {
+  text-align: left;
+  font-size: 0.7rem;
+  padding-bottom: 10px;
 }
 
-
-  
+#gitHub li a {
+  color: #6b6b6b;
+  font-size: 1.5rem;
+}
 
 
 
