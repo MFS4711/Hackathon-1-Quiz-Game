@@ -160,9 +160,17 @@ function checkAnswer(button, gameState) {
   // Disable Answer Buttons to ensure they can't be clicked whilst answer is being checked
   disableAnswerButtons();
 
-  // Display Next Quesion Button
+  // Display Next Quesion Button - SOMETHING TO THINK ABOUT - Make button say end quiz or some message
+
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.style.display = "inline-block";
+  
+  if (gameState.questionIndex === gameState.questionSet.length-1) {
+    nextButton.innerText = "End Quiz"
+  }
+
+  // const nextButton = document.getElementById("btn_nextquestion");
+  // nextButton.style.display = "inline-block";
 
 }
 
