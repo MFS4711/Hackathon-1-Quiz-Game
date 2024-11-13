@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
           })
           .then(function (object) {
-            // CONFIRMED: object is different for each button - SUCCESS
             // console.log(object);
             // Add questions to gameSet object
             gameState.questionSet = object.results;
-            // console.log("gameState:", gameState);
+            gameState.questionsRemaining = gameState.questionSet.length;
+            console.log("gameState:", gameState);
             // function to run the game should be below
             runGame(gameState);
           });
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // function that displays feedback
       } else if (this.getAttribute("data-type") === "next-question-btn") {
         // function which gets next question
-        console.log("gameState:", gameState);
+        // console.log("gameState:", gameState);
         nextQuestion(gameState);
       }
     });
@@ -103,6 +103,10 @@ function runGame(gameState) {
   const questionNumberElement = document.getElementById("question_number");
   questionNumberElement.innerText = gameState.questionNumber;
 
+  // display questions remaining is 10
+  const questionsRemainingElement = document.getElementById("questions-left");
+  questionsRemainingElement.innerText = gameState.questionsRemaining;
+
   displayQuestion(gameState);
 }
 
@@ -122,25 +126,28 @@ function displayQuestion(gameState) {
   const questionNumberElement = document.getElementById("question_number");
   questionNumberElement.innerText = gameState.questionNumber;
 
-  // display the question
-  const questionElement = document.getElementById("question");
+  // display questions remaining
+  const questionsRemainingElement = document.getElementById("questions-left");
+  questionsRemainingElement.innerText = gameState.questionsRemaining;
 
+  // display the question
   const currentQuestion =
     gameState.questionSet[gameState.questionIndex].question;
   // console.log("question:", gameState.questionSet[gameState.questionIndex].question);
 
+  const questionElement = document.getElementById("question");
   questionElement.innerText = currentQuestion;
-
 }
 
 /**
  * This function should check which answer was clicked and indicate if the answer was correct
  */
 function checkAnswer(button, gameState) {
-
-  const currentQuestion = gameState.questionSet[gameState.questionIndex].question;
+  const currentQuestion =
+    gameState.questionSet[gameState.questionIndex].question;
   const selectedAnswer = button.innerText;
-  const correctAnswer = gameState.questionSet[gameState.questionIndex].correct_answer;
+  const correctAnswer =
+    gameState.questionSet[gameState.questionIndex].correct_answer;
 
   const feedbackMessage = document.getElementById("feedback");
   const currentScore = document.getElementById("current-score");
@@ -164,18 +171,16 @@ function checkAnswer(button, gameState) {
 
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.style.display = "inline-block";
-  
-  if (gameState.questionIndex === gameState.questionSet.length-1) {
-    nextButton.innerText = "End Quiz"
+
+  if (gameState.questionIndex === gameState.questionSet.length - 1) {
+    nextButton.innerText = "End Quiz";
   }
 
   // const nextButton = document.getElementById("btn_nextquestion");
   // nextButton.style.display = "inline-block";
-
 }
 
 function nextQuestion(gameState) {
-
   // remove feedback message
   const feedbackMessage = document.getElementById("feedback");
   feedbackMessage.innerText = "";
@@ -183,6 +188,8 @@ function nextQuestion(gameState) {
   // increment index and question number
   gameState.questionIndex++;
   gameState.questionNumber++;
+  // decrease questions remaining
+  gameState.questionsRemaining--;
 
   if (gameState.questionIndex < gameState.questionSet.length) {
     // display next question
@@ -198,30 +205,84 @@ function nextQuestion(gameState) {
  * This function should disable the answer buttons - true and false to prevent multiple clicks in a round
  */
 function disableAnswerButtons() {
-
+  const answerButtons = document.querySelectorAll(
+    "button[data-type='true-btn'], button[data-type='false-btn']"
+  );
+  // for each allows each array element to be acted on
+  answerButtons.forEach((button) => (button.disabled = true));
 }
 
 /**
  * This function should enable the answer buttons - true and false in preparation for the next question
  */
 function enableAnswerButtons() {
-
+  const answerButtons = document.querySelectorAll(
+    "button[data-type='true-btn'], button[data-type='false-btn']"
+  );
+  answerButtons.forEach((button) => (button.disabled = false));
 }
 
 function endGame(gameState) {
-
+  // Final page should now be visible and all other pages removed
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
-  
-  // Final page should now be visible and all other pages removed
+
   if (quizPage.style.display === "block") {
     quizPage.style.removeProperty("display");
     quizPage.style.display = "none";
   }
-
   if (endPage.style.display === "none") {
     endPage.style.removeProperty("display");
     endPage.style.display = "block";
   }
 
+  // Display final Score
+  const finalScore = document.getElementById("final-score");
+  finalScore.innerText = ` ${gameState.score} / ${gameState.questionSet.length}`;
+  // console.log(gameState.score/gameState.questionSet.length);
+
+  // Display a different message depending on the score
+  const finalMessage = document.getElementById("final-message");
+  if (gameState.score / gameState.questionSet.length === 1) {
+    finalMessage.innerText = `You did it! A perfect score of ${gameState.score}/${gameState.questionSet.length}. Truly outstanding work!`;
+  } else if (gameState.score / gameState.questionSet.length >= 0.8) {
+    finalMessage.innerText = `Awesome! You scored ${gameState.score}/${gameState.questionSet.length} you're in the top tier of quiz masters! Keep it up!`;
+  } else if (gameState.score / gameState.questionSet.length >= 0.6) {
+    finalMessage.innerText = `You're doing great! With ${gameState.score}/${gameState.questionSet.length}, you're almost there. Just a bit more and you'll hit the top!`;
+  } else if (gameState.score / gameState.questionSet.length >= 0.4) {
+    finalMessage.innerText = `Not bad! You scored ${gameState.score}/${gameState.questionSet.length}. You're getting there—keep practicing, and you'll improve!`;
+  } else if (gameState.score / gameState.questionSet.length >= 0.2) {
+    finalMessage.innerText = `It's a start! You scored ${gameState.score}/${gameState.questionSet.length}, but don't worry, every quiz is a chance to learn and improve!`;
+  } else if (gameState.score / gameState.questionSet.length >= 0) {
+    finalMessage.innerText = `You got some right! ${gameState.score}/${gameState.questionSet.length} means you're on the board. Great start—keep going`;
+  } else {
+    finalMessage.innerText = `Don't worry, everyone starts somewhere! You scored ${gameState.score}/${gameState.questionSet.length}, but you've got this—try again and see how much you can improve!`;
+  }
+
+  // Display questions and answers
+  const finalPageQandA = document.getElementById("quiz-end-questions");
+
+  for (let i = 0; i < gameState.questionSet.length; i++) {
+    const question = gameState.questionSet[i].question;
+    const answer = gameState.questionSet[i].correct_answer;
+    const questionNum = i + 1;
+    // console.log(question);
+    // console.log(answer);
+
+    let htmlString = `
+    <p> <strong> Question ${questionNum}:</strong> ${question} <br>
+     <strong> Answer:</strong> ${answer} </p>
+    `;
+
+    finalPageQandA.innerHTML += htmlString;
+  }
+
+  // Reset gameState object
+  gameState.questionNumber = 1;
+  gameState.questionIndex = 0;
+  gameState.score = 0;
+
+  // Reset Next Question text
+  const nextButton = document.getElementById("btn_nextquestion");
+  nextButton.innerText = "Next Question";
 }
