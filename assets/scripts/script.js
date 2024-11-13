@@ -86,6 +86,7 @@ function runGame(gameState) {
 
   if (quizPage.style.display === "none") {
     quizPage.style.removeProperty("display");
+    quizPage.style.display = "block";
   }
 
   if (endPage.style.display === "block") {
@@ -176,7 +177,9 @@ function nextQuestion(gameState) {
   gameState.questionNumber++;
 
   if (gameState.questionIndex < gameState.questionSet.length) {
+    // display next question
     displayQuestion(gameState);
+    // enable buttons for next q
     enableAnswerButtons();
   } else {
     endGame(gameState);
@@ -198,6 +201,19 @@ function enableAnswerButtons() {
 }
 
 function endGame(gameState) {
+
+  const quizPage = document.getElementById("game-area");
+  const endPage = document.getElementById("quiz-end-page");
   
   // Final page should now be visible and all other pages removed
+  if (quizPage.style.display === "block") {
+    quizPage.style.removeProperty("display");
+    quizPage.style.display = "none";
+  }
+
+  if (endPage.style.display === "none") {
+    endPage.style.removeProperty("display");
+    endPage.style.display = "block";
+  }
+
 }
