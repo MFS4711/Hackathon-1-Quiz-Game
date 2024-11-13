@@ -37,11 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.json();
           })
           .then(function (object) {
-            console.log(object);
+            // console.log(object);
             // Add questions to gameSet object
             gameState.questionSet = object.results;
             gameState.questionsRemaining = gameState.questionSet.length;
-            // console.log("gameState:", gameState);
+            console.log("gameState:", gameState);
             // function to run the game should be below
             runGame(gameState);
           });
@@ -213,7 +213,6 @@ function disableAnswerButtons() {}
 function enableAnswerButtons() {}
 
 function endGame(gameState) {
-
   // Final page should now be visible and all other pages removed
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
@@ -230,26 +229,43 @@ function endGame(gameState) {
   // Display final Score
   const finalScore = document.getElementById("final-score");
   finalScore.innerText = ` ${gameState.score} / ${gameState.questionSet.length}`;
-  console.log(gameState.score/gameState.questionSet.length);
+  // console.log(gameState.score/gameState.questionSet.length);
 
   // Display a different message depending on the score
-  const finalMessage = document.getElementById("final-message")
-  if (gameState.score/gameState.questionSet.length === 1) {
+  const finalMessage = document.getElementById("final-message");
+  if (gameState.score / gameState.questionSet.length === 1) {
     finalMessage.innerText = `You did it! A perfect score of ${gameState.score}/${gameState.questionSet.length}. Truly outstanding work!`;
-  } else if (gameState.score/gameState.questionSet.length >= 0.8) {
+  } else if (gameState.score / gameState.questionSet.length >= 0.8) {
     finalMessage.innerText = `Awesome! You scored ${gameState.score}/${gameState.questionSet.length} you're in the top tier of quiz masters! Keep it up!`;
-  } else if (gameState.score/gameState.questionSet.length >= 0.6) {
+  } else if (gameState.score / gameState.questionSet.length >= 0.6) {
     finalMessage.innerText = `You're doing great! With ${gameState.score}/${gameState.questionSet.length}, you're almost there. Just a bit more and you'll hit the top!`;
-  } else if (gameState.score/gameState.questionSet.length >= 0.4) {
+  } else if (gameState.score / gameState.questionSet.length >= 0.4) {
     finalMessage.innerText = `Not bad! You scored ${gameState.score}/${gameState.questionSet.length}. You're getting there—keep practicing, and you'll improve!`;
-  } else if (gameState.score/gameState.questionSet.length >= 0.2) {
+  } else if (gameState.score / gameState.questionSet.length >= 0.2) {
     finalMessage.innerText = `It's a start! You scored ${gameState.score}/${gameState.questionSet.length}, but don't worry, every quiz is a chance to learn and improve!`;
-  } else if (gameState.score/gameState.questionSet.length >= 0) {
+  } else if (gameState.score / gameState.questionSet.length >= 0) {
     finalMessage.innerText = `You got some right! ${gameState.score}/${gameState.questionSet.length} means you're on the board. Great start—keep going`;
   } else {
     finalMessage.innerText = `Don't worry, everyone starts somewhere! You scored ${gameState.score}/${gameState.questionSet.length}, but you've got this—try again and see how much you can improve!`;
   }
+
+  // Display questions and answers
+  const finalPageQandA = document.getElementById("quiz-end-questions");
   
+  for (let i = 0; i < gameState.questionSet.length; i++) {
+    const question = gameState.questionSet[i].question;
+    const answer = gameState.questionSet[i].correct_answer;
+    const questionNum = i + 1;
+    // console.log(question);
+    // console.log(answer);
+
+    let htmlString = `
+    <p> <strong> Question ${questionNum}:</strong> ${question} <br>
+     <strong> Answer:</strong> ${answer} </p>
+    `;
+
+    finalPageQandA.innerHTML += htmlString;
+  }
 
   // Reset gameState object
   gameState.questionNumber = 1;
