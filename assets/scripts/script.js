@@ -107,6 +107,10 @@ function runGame(gameState) {
   const questionsRemainingElement = document.getElementById("questions-left");
   questionsRemainingElement.innerText = gameState.questionsRemaining;
 
+  // Ensure final Q and A section string is reset
+  const finalPageQandA = document.getElementById("quiz-end-questions");
+  finalPageQandA.innerHTML = "";
+
   displayQuestion(gameState);
 }
 
