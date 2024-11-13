@@ -32,46 +32,54 @@
 
 <body>
 
-  <!--<div class="header-container" id="quiz-title">
+  <div class="header-container" id="quiz-title">
     <div class="row">
       <div class="col-sm">
-        <h1>Welcome To Mind Mingle!!</h1>
+        <h1>Welcome To Mind Mingle!</h1>
       </div>
     </div>
   </div>
 
-  <div id="first-page">
-    <div class="instructions-container" id="instructions">
-      <div class="row">
-        <div class="col-sml- 6">
-          <p>Welcome to Mind Mingle<br>
-            Click start to answer 10 general knowledge questions.<br>
-            Good Luck!
-            
-          </p>
-        </div>
+  <div id="homepage">
+    <div id="first-page">
+      <div class="instructions-container" id="instructions">
+        <div class="row">
+          <div class="col-sml- 6">
+            <p>Welcome to Mind Mingle<br>
+              Click Start<br> to begin the general knowledge quiz<br>
+              Good Luck!
 
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div>
+        <button id="start-button" data-type="start-btn">Start Quiz</button>
       </div>
     </div>
- 
-
-    <div>
-      <button id="start-button" data-type="start-btn">Start Quiz</button>
-    </div>
-  </div> -->
+  </div>
   <!------------------------------------------------------------------------------>
 
   <!------------------- Game Area------------>
   <div id="game-area">
-    <h1 class="heading">Quiz Yourself!</h1>
+    <h1>Test you Knowledge!</h1>
     <br><br>
     <div class="container questions-container" id="questions">
       <div class="row" id="question_area">
+
         <div class="col">
-          <span id="question-id"><strong>Question 1</strong></span>
+          <span id="question-id"><strong>Question <span id="question_number">1</span></strong></span>
           <br><br><br><br>
           <p id="question">Here is the question ??????</p>
           <br>
+
+        </div>
+        <div class="col-12">
+          <p id="question"></p>
         </div>
       </div>
       <div class="row" id="btn_area">
@@ -81,7 +89,7 @@
         </div>
         <div class="row" id="feedback_area">
           <div class="col">
-            <p id="feedback">FeedBack here</p>
+            <span id="feedback"></span>
             <br><br>
           </div>
           
@@ -109,8 +117,28 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-------------------------------------------------------------------->
+      <!-- Score Area -->
+      <div class="row">
+
+        <div class="col-6" id="score-area">
+          <h4>Score:</h4>
+          <p id="current-score">3</p>
+        </div>
+
+        <div class="col-6" id="questions-remaining">
+          <h4>Q's Left: </h4>
+          <p id="questions-left">3</p>
+        </div>
+
+      </div>
     </div>
-        <!-- Quiz End Page --> <!--
+  </div>
+
+
+
+  <!-- Quiz End Page -->
   <div id="quiz-end-page">
 
     <div class="row">
@@ -121,16 +149,17 @@
 
     <div class="row">
       <div class="col-12">
-        <h3>You Scored:<span id="final-score">4/10</span></h3>
+        <h3>You Scored:<span id="final-score"></span></h3>
         <p id="final-message">Well Done!</p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-12">
-        <h3>Quiz Questions Asked:</h3>-->
-        <!-- Need to add relevant id's to give all q's and answers --> <!--
-        <p></p>
+        <h3>All Questions and Answers</h3>
+      </div>
+      <div class="col-12" id="quiz-end-questions">
+
       </div>
     </div>
 
@@ -140,7 +169,7 @@
       </div>
     </div>
 
-  </div> -->
+  </div>
 
         <!-- Footer -->
         <footer>
