@@ -285,4 +285,7 @@ function endGame(gameState) {
   // Reset Next Question text
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.innerText = "Next Question";
+
+  // enable answer buttons
+  enableAnswerButtons();
 }
