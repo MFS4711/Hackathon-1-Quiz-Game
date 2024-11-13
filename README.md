@@ -250,25 +250,17 @@ Describe how DALL-E was used for image generation, including examples of success
 ## Features Implementation
 
 ### Core Features (Must-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
-
-(Include all must-have features)  
-**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
+- **Feature 1:** Game Start: The "Start Game" button (User Story 1) initializes the game with a clean slate ensuring users can easily begin a new game. The score, question number, and API object is reset in the associated JavaScript.
+- **Feature 2:** True/False Questions: Questions are randomly selected from the API and displayed one at a time (User Story 2, 4), allowing users to engage with different questions throughout the game session.
+- **Feature 3:** Answer Selection: The "True" and "False" buttons (User Story 3) are interactive, providing users with a clear and visual way to select answers. Immediate feedback is provided, helping the user understand their performance after each question.
+- **Feature 4:** Score Tracking: The score is updated in real time (User Story 7) after each correct answer, ensuring users know how they’re progressing throughout the game.
+- **Feature 5:** End of Game: The game can end automatically after a fixed number of questions (User Story 5).
+- **Feature 6:** Feedback: Users receive immediate feedback on their answers (User Story 8), reinforcing their understanding of correct and incorrect responses.
 
 ### Advanced Features (Should-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
-
-(Include all should-have features)  
-**Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
-
-### Optional Features (Could-Haves)
-- **Feature 1:** Description of the implemented feature (if any).
-- **Feature 2:** Description of the implemented feature (if any).
-
-(Include any could-have features that were implemented or considered)  
-**Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
+- **Feature 1:** Remaining Questions Display: Users are shown how many questions are remaining, helping them pace themselves (User Story 2).
+- **Feature 2:** Review Incorrect Answers: Users can review their incorrect answers at the end of the game to learn from their mistakes (User Story 5).
+- **Feature 3:** Play Again Option: A "Play Again" button allows users to restart the quiz without navigating to the main menu (User Story 7).
 
 ## AI Tools Usage
 
