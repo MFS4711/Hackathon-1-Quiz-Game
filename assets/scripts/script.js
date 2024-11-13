@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // First page should be visible whilst the other should not
 
-  const openingPage = document.getElementById("first-page");
+  const openingPage = document.getElementById("homepage");
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
 
-  openingPage.style.display = "flex";
+  openingPage.style.display = "block";
   quizPage.style.display = "none";
   endPage.style.display = "none";
 
@@ -75,7 +75,7 @@ function runGame(gameState) {
   // Make the question area page visible
 
   // SOMETHING TO THINK ABOUT - separate function can be used for the page logic - can use switch case?
-  const openingPage = document.getElementById("first-page");
+  const openingPage = document.getElementById("homepage");
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
 
