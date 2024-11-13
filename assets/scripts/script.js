@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // console.log(object);
             // Add questions to gameSet object
             gameState.questionSet = object.results;
-            // console.log("gameState:", gameState);
+            gameState.questionsRemaining = gameState.questionSet.length;
+            console.log("gameState:", gameState);
             // function to run the game should be below
             runGame(gameState);
           });
@@ -103,6 +104,10 @@ function runGame(gameState) {
   const questionNumberElement = document.getElementById("question_number");
   questionNumberElement.innerText = gameState.questionNumber;
 
+  // display questions remaining is 10
+  const questionsRemainingElement = document.getElementById("questions-left");
+  questionsRemainingElement.innerText = gameState.questionsRemaining;
+
   displayQuestion(gameState);
 }
 
@@ -125,22 +130,26 @@ function displayQuestion(gameState) {
   // display the question
   const questionElement = document.getElementById("question");
 
+  // display questions remaining
+  const questionsRemainingElement = document.getElementById("questions-left");
+  questionsRemainingElement.innerText = gameState.questionsRemaining;
+
   const currentQuestion =
     gameState.questionSet[gameState.questionIndex].question;
   // console.log("question:", gameState.questionSet[gameState.questionIndex].question);
 
   questionElement.innerText = currentQuestion;
-
 }
 
 /**
  * This function should check which answer was clicked and indicate if the answer was correct
  */
 function checkAnswer(button, gameState) {
-
-  const currentQuestion = gameState.questionSet[gameState.questionIndex].question;
+  const currentQuestion =
+    gameState.questionSet[gameState.questionIndex].question;
   const selectedAnswer = button.innerText;
-  const correctAnswer = gameState.questionSet[gameState.questionIndex].correct_answer;
+  const correctAnswer =
+    gameState.questionSet[gameState.questionIndex].correct_answer;
 
   const feedbackMessage = document.getElementById("feedback");
   const currentScore = document.getElementById("current-score");
@@ -164,18 +173,16 @@ function checkAnswer(button, gameState) {
 
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.style.display = "inline-block";
-  
-  if (gameState.questionIndex === gameState.questionSet.length-1) {
-    nextButton.innerText = "End Quiz"
+
+  if (gameState.questionIndex === gameState.questionSet.length - 1) {
+    nextButton.innerText = "End Quiz";
   }
 
   // const nextButton = document.getElementById("btn_nextquestion");
   // nextButton.style.display = "inline-block";
-
 }
 
 function nextQuestion(gameState) {
-
   // remove feedback message
   const feedbackMessage = document.getElementById("feedback");
   feedbackMessage.innerText = "";
@@ -183,6 +190,8 @@ function nextQuestion(gameState) {
   // increment index and question number
   gameState.questionIndex++;
   gameState.questionNumber++;
+  // decrease questions remaining
+  gameState.questionsRemaining--;
 
   if (gameState.questionIndex < gameState.questionSet.length) {
     // display next question
@@ -197,22 +206,17 @@ function nextQuestion(gameState) {
 /**
  * This function should disable the answer buttons - true and false to prevent multiple clicks in a round
  */
-function disableAnswerButtons() {
-
-}
+function disableAnswerButtons() {}
 
 /**
  * This function should enable the answer buttons - true and false in preparation for the next question
  */
-function enableAnswerButtons() {
-
-}
+function enableAnswerButtons() {}
 
 function endGame(gameState) {
-
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
-  
+
   // Final page should now be visible and all other pages removed
   if (quizPage.style.display === "block") {
     quizPage.style.removeProperty("display");
@@ -223,5 +227,4 @@ function endGame(gameState) {
     endPage.style.removeProperty("display");
     endPage.style.display = "block";
   }
-
 }
