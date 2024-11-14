@@ -57,6 +57,7 @@
       <div>
         <button id="start-button" data-type="start-btn">Start Quiz</button>
       </div>
+    
     </div>
   </div>
   <!------------------------------------------------------------------------------>
@@ -123,16 +124,18 @@
   <!-- Quiz End Page -->
   <div id="quiz-end-page">
 
-    <div class="row">
-      <div class="col-12">
-        <h1>That's the end of the Quiz</h1>
-      </div>
+    <div class="row row-response">
+      <!--<div class="col-12 ">
+        <span id="end-quiz-header">That's the end of the Quiz</span>
+      </div>-->
     </div>
-
+ <div id ="final-results-area">
     <div class="row">
-      <div class="col-12">
-        <h3>You Scored:<span id="final-score"></span></h3>
+      <div class="col-12 responses">
+        <h3 id="finalscore">You Scored:</h3><span id="final-score"></span></h3>
+        <div>
         <p id="final-message">Well Done!</p>
+      </div>
       </div>
     </div>
 
@@ -144,10 +147,10 @@
 
       </div>
     </div>
-
+ </div>
     <div class="row">
       <div class="col-12">
-        <button data-type="play-again-btn">Play Again</button>
+        <button id="play-again" data-type="play-again-btn">Play Again</button>
       </div>
     </div>
 
@@ -167,7 +170,7 @@
     <p>© 2024 Mind Mingle. All rights reserved.</p>
 
   </footer>
-
+  
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
