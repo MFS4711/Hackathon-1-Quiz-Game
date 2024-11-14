@@ -12,6 +12,8 @@ body{
   background-image: url(../images/cubes.avif);
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {
@@ -165,7 +167,7 @@ text-align: end;
 @media  (min-width:300px) {
 
     .instructions-container{
-      font-size: 20px;
+      font-size: 18px;
       padding-top: 10px;
       border: 2px solid black;
       border-radius: 10px;
@@ -179,16 +181,10 @@ text-align: end;
   
     }
 
-    #final-results-area{
-      flex-direction: column;
-      display: flex;
-      margin-top: 10px;
-      background-color: #3D3B8E;
-      opacity: 0.9;
-      color: white;
-      margin-top: 15px;
-      width: 50%;
-    }
+
+    
+
+   
     
   }
 
@@ -210,7 +206,18 @@ text-align: end;
   
     }
     
+    #final-results-area{
+      flex-direction: column;
+      display: flex;
+      margin-top: 10px;
+      background-color: #3D3B8E;
+      opacity: 0.9;
+      color: white;
+      margin-top: 15px;
+      width: 50%;
+
     }
+  }
 /*----------Game Area----------------->
 
 
@@ -348,7 +355,7 @@ footer p {
   opacity: 0.9;
   color: white;
   margin-top: 15px;
-  width: 50%;
+
 }
 
 .responses{
