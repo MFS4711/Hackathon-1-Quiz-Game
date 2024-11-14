@@ -258,14 +258,24 @@ This is very similar to the tablet view, the only difference being that the cont
 The layout follows the laptop view but there should be a container which stops the content growing at a certain point.
 
 ### Colours
+![Color Palette](./assets/images/readme/mind%20mingle.png)
 
-#### A particular colour (#hexcode)
+#### Marian Blue  (#3D3B8E)
+We chose this color as the maain theme colour throughout the page, it proves nice contrast to the background and fits 
+in well with the theme of the quiz, for text and information boxes the colour is used with an opacity of 0.8 to allow the background image to be partly visible, this colour is used as a solid for buttons
 
-#### Another colour (#hexcode)
+#### Vermillion (#E53935)
+This colour is used to provide the user with a clear visual indicator of questions remaing
 
-#### etc.
+#### Old gold (#CFB53B)
+This colour is used to provide the user with a clear visual indicator of current correct answers in the questions 
+page of the quiz.
+
+### General Colours
+white and black were used in this project for some background colour and some border colour.
 
 ### Fonts
+Quantico - google font was used throughout this project, it is clear easy to read and suits the theme and style of our mind mingle quiz. 
 
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
@@ -273,6 +283,8 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 
 #### Colour Contrast
 The team ensured to adhere to accessibility guidelines by using the combinations of colours we picked. We used [Coolers Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) to examine the colours used during the project.  Below you will find the results of the various contrast checks we completed where we compared the background colour with the foreground content:
+
+![Colour contrast Check](./assets/images/readme/contrast-checker.png)
 
 #### Screen Reader Accessibility
 
@@ -370,6 +382,7 @@ Educational resources used include [Code Institute](https://codeinstitute.net/),
 Use of ChatGPT supported clarification of coding issues faced as well as providing suggestions for improvement.
 
 ### Image Sources
+The Bookshelf background image that we used for the first and last page was taken form [Unsplash](https://unsplash.com/) 
 
 
 ### Icons/Styles
