@@ -399,7 +399,7 @@ The font size in question containers and score containers was adjusted for reada
 
 #### Lighthouse Performance Test
 
-[Lighthouse test](./assets/images/readme/lighthouse.png)
+![Lighthouse test](./assets/images/readme/lighthouse.png)
 
 ### Validation
 
