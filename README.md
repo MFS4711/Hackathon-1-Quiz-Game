@@ -23,6 +23,9 @@
      - [Optional Features (Could-Haves)](#advanced-features-should-haves)
  5. [Testing and Validation](#testing-and-validation)
      - [Testing Results](#testing-results)
+         - [Bug Fixes](#bug-fixes)
+         - [Responsiveness](#responsiveness)
+         - [Lighthouse Performance Test](#lighthouse-performance-test)
      - [Validation](#validation)
  6. [Deployment](#deployment)
      - [Deployment Process](#deployment-process)
@@ -352,6 +355,10 @@ There were many bugs created and resolved in JavaScript. These were debugged usi
 - bug fix - questions and answers from the previous round were showing after the following round with those Qs and As being after it, so lengthening the page - resolved by ensuring the HTML string is empty in the runGame function, so each round a new set of questions and answers relevant to that round are showing.
 
 #### Responsiveness
+
+
+
+#### Lighthouse Performance Test
 
 ### Validation
 Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
