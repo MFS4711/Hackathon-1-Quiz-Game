@@ -333,8 +333,6 @@ These User Stories as well as some of the should-have user stories were not impl
 
 ### Testing Results
 
-### Testing Results
-
 #### Bug Fixes
 During the development of the Mind Mingle General Knowledge Quiz (True/False) game, several bugs and issues were identified and fixed to ensure smooth functionality and a better user experience. Below is a summary of the key fixes made to the CSS and HTML for the Quiz page .
 ##### HTML Related
@@ -392,6 +390,8 @@ Fix:
 Applied media queries to adjust the layout of the quiz on smaller screens.
 Buttons and containers now resize dynamically with width: 100% for smaller screen sizes.
 The font size in question containers and score containers was adjusted for readability on mobile devices.
+
+![Am I Responsive](assets/images/readme/responsiveness.png)
 
 
 #### Lighthouse Performance Test
