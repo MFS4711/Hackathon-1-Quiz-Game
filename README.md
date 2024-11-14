@@ -23,6 +23,9 @@
      - [Optional Features (Could-Haves)](#advanced-features-should-haves)
  5. [Testing and Validation](#testing-and-validation)
      - [Testing Results](#testing-results)
+         - [Bug Fixes](#bug-fixes)
+         - [Responsiveness](#responsiveness)
+         - [Lighthouse Performance Test](#lighthouse-performance-test)
      - [Validation](#validation)
  6. [Deployment](#deployment)
      - [Deployment Process](#deployment-process)
@@ -278,8 +281,6 @@ white and black were used in this project for some background colour and some bo
 Quantico - google font was used throughout this project, it is clear easy to read and suits the theme and style of our mind mingle quiz. 
 
 ### Accessibility Considerations
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
 #### Colour Contrast
 The team ensured to adhere to accessibility guidelines by using the combinations of colours we picked. We used [Coolers Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) to examine the colours used during the project.  Below you will find the results of the various contrast checks we completed where we compared the background colour with the foreground content:
@@ -339,7 +340,15 @@ Mention any issues found and how they were resolved.
 
 #### Bug Fixes
 
-#### JS Related
+##### HTML Related
+
+
+
+##### CSS Related
+
+
+
+##### JS Related
 There were many bugs created and resolved in JavaScript. These were debugged using the console in Google Chromes Developer Tools as well as regularly applying console.log() at various points in the code to understand how a a particular variable or object was being passsed from one function to another. Further to this, ChatGPT also helped to identify some issues but was not relied on for solutions as it can often make mistakes. This is explained further in the [AI Tools Usage](#ai-tools-usage) section.
 
 - bug fix - play again button was not fetching API - fixed by amending the if statement argument ensuring play again and start game operate in the same way and a new set of questions is retrieved.
@@ -353,16 +362,23 @@ There were many bugs created and resolved in JavaScript. These were debugged usi
 
 #### Responsiveness
 
+
+
+#### Lighthouse Performance Test
+
+
+
 ### Validation
-Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
-Include the results of the validation process.  
-**Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
 
 #### HTML Validation
 HTML validation was achieved using the [W3C Validator](https://validator.w3.org/) which ensured the code met web standards.
 
+
+
 #### CSS Validation
 CSS validation was achieved using the [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) which ensured the code met web standards.
+
+
 
 #### JavaScript Validation
 Although there was not a specific JavaScript validator for web standards, we used a version of [JSHint](https://mfs4711.github.io/jshint-api/) which was created during a walkthrough session in a previous Code Institute module. This suggested only one potential error when the code was input. A screenshot of this is shown below.
@@ -405,8 +421,6 @@ In regards to the coding aspect, as this was our first collaborative project usi
 In regards to the final product created, this has incorporated all the must-have user stories and some of the should-have. With the time limit for this project being only 2.5 days, some features initially intended to be incorporated could not. However, the final product is functioning and does act as a fun, simple, educational tool as per the purpose and target audience of this project.
 
 ## Code Attribution
-Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
-**Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
 
 ### Educational Sources
 There were many sources used for educational purposes during the course of this project to not only aid in refreshing previous content covered in HTML, CSS and JavaScript, but also provided a platform to enhance our knowledge further.
