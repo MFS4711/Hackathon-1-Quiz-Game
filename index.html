@@ -64,58 +64,73 @@
 
   <!------------------- Game Area------------>
   <div id="game-area">
-    <!-- <h1>Test you Knowledge!</h1> -->
-    
-    <div class="container questions-container" id="questions">
-      <div class="row" id="question_area">
 
-        <div class="col">
-          <span id="question-id"><strong>Question <span id="question_number">1</span></strong></span>
-          <br><br><br>
+    <div class="container questions-container" id="questions">
+
+      <div id="question-area">
+        <div class="row">
+
+          <div class="col-12">
+            <p id="question-id"><strong>Question <span id="question_number">1</span></strong></p>
+          </div>
         </div>
-        <div class="col-12">
-          <p id="question"></p>
+
+        <div class="row">
+          <div class="col-12">
+            <p id="question"></p>
+          </div>
         </div>
       </div>
+
       <div class="row" id="btn_area">
-        <div class="col-6">
-          <button class="btn  btn-lg" id="true_btn" data-type="true-btn">True</button>
+        <div class="col-12 col-md-6">
+          <button class="btn btn-lg" id="true_btn" data-type="true-btn">True</button>
+        </div>
+        <div class="col-12 col-md-6">
           <button class="btn btn-lg" id="false_btn" data-type="false-btn">False</button>
         </div>
-        <div class="row" id="feedback_area">
-          <div class="col">
-            <span id="feedback"></span>
-            <br><br>
-          </div>
+      </div>
 
-        </div>
-        <div class="row" id="nextquestion_area">
-          <div class="col">
-            <button id="btn_nextquestion" class="btn" data-type="next-question-btn">Next Question</button>
-          </div>
+      <div class="row" id="feedback_area">
+        <div class="col-12">
+          <p id="feedback"></p>
         </div>
       </div>
+
+      <div class="row" id="nextquestion_area">
+        <div class="col-12">
+          <button id="btn_nextquestion" class="btn" data-type="next-question-btn">Next Question</button>
+        </div>
+      </div>
+
     </div>
+
+
+
     <!-------------------------------------------------------------------->
     <!--  Score Area -->
-    <div class="container score-container" id="score">
+    <div class="container">
+      <div class="row" id="score">
+        <div class="col-12 offset-md-3 col-md-6">
 
-      <div class="row">
+          <div class="row score-container">
 
-        <div class="col-6" id="score-area">
-          <h4>Score:</h4>
-          <p id="current-score">3</p>
+            <div class="col-6" id="score-area">
+              <h4>Score:</h4>
+              <p id="current-score">3</p>
+            </div>
+
+            <div class="col-6" id="questions-remaining">
+              <h4>Q's Left: </h4>
+              <p id="questions-left">3</p>
+            </div>
+
+          </div>
         </div>
-
-        <div class="col-6" id="questions-remaining">
-          <h4>Q's Left: </h4>
-          <p id="questions-left">3</p>
-        </div>
-
       </div>
-
     </div>
   </div>
+
 
   <!-------------------------------------------------------------------->
 
