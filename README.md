@@ -272,7 +272,7 @@ This colour is used to provide the user with a clear visual indicator of questio
 
 #### Old gold (#CFB53B)
 This colour is used to provide the user with a clear visual indicator of current correct answers in the questions 
-page of the quiz
+page of the quiz.
 
 ### General Colours
 white and black were used in this project for some background colour and some border colour.
