@@ -1,4 +1,4 @@
-# Hackathon-1-Quiz-Game
+# Mind Mingle Quiz - Hackathon 1
 
  ***<p style="text-align:center;">HTML / CSS / JavaScript</p>***
 
@@ -332,9 +332,6 @@ These User Stories as well as some of the should-have user stories were not impl
 ## Testing and Validation
 
 ### Testing Results
-Summarize the results of testing across different devices and screen sizes.  
-Mention any issues found and how they were resolved.  
-**Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
 
 ### Testing Results
 
@@ -399,19 +396,19 @@ The font size in question containers and score containers was adjusted for reada
 
 #### Lighthouse Performance Test
 
-[Lighthouse test](./assets/images/readme/lighthouse.png)
+![Lighthouse test](./assets/images/readme/lighthouse.png)
 
 ### Validation
 
 #### HTML Validation
 HTML validation was achieved using the [W3C Validator](https://validator.w3.org/) which ensured the code met web standards.
 
-
+![HTML Validation](assets/images/readme/HTML-Validation.png)
 
 #### CSS Validation
 CSS validation was achieved using the [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) which ensured the code met web standards.
 
-
+![CSS Validation](assets/images/readme/CSS-validation.png)
 
 #### JavaScript Validation
 Although there was not a specific JavaScript validator for web standards, we used a version of [JSHint](https://mfs4711.github.io/jshint-api/) which was created during a walkthrough session in a previous Code Institute module. This suggested only one potential error when the code was input. A screenshot of this is shown below.
@@ -465,7 +462,7 @@ Use of ChatGPT supported clarification of coding issues faced as well as providi
 ### Image Sources
 The Bookshelf background image that we used for the first and last page was taken form [Unsplash](https://unsplash.com/) 
 The favIcon image used on the Mind Mingle pages was sourced from [freepik](https://www.freepik.com/photos/degree/) 
-The cubes image used for the quiz page was sourced from          [pngtree]https://pngtree.com/free-backgrounds-photos/purple-cube-pictures)
+The cubes image used for the quiz page was sourced from          [pngtree](https://pngtree.com/free-backgrounds-photos/purple-cube-pictures)
 
 ### Icons/Styles
 - [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
