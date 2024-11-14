@@ -339,10 +339,19 @@ Mention any issues found and how they were resolved.
 ### Testing Results
 
 #### Bug Fixes
-
+During the development of the Mind Mingle General Knowledge Quiz (True/False) game, several bugs and issues were identified and fixed to ensure smooth functionality and a better user experience. Below is a summary of the key fixes made to the CSS and HTML for the Quiz page .
 ##### HTML Related
-
-
+- Accessibility Issues
+Bug: The quiz lacked proper accessibility for users with screen readers and keyboard navigation.
+Fix:
+Added aria-labels to buttons to describe their actions, making them more accessible for screen reader users.
+Ensured all buttons are focusable and navigable via the keyboard.
+Corrected semantic HTML usage by making sure elements like <header>, <main>, and <footer> are properly used for better screen reader support.
+-  Improved Mobile Layout with Bootstrap
+Bug: The quiz did not display correctly on mobile screens, with content overflowing and not adjusting to the screen width.
+Fix:
+col-12 ensures the content is displayed in a single column on small screens.
+This helps create a clean, single-column layout that is easy to read and interact with on devices with smaller screens.
 
 ##### CSS Related
 There were a couple of Fixes required in the css mainly due to resonsiveness of the project, Dev tools in chrome was used to identify and resolve the issues.
@@ -350,7 +359,22 @@ There were a couple of Fixes required in the css mainly due to resonsiveness of 
 - Final page results div, filling 50% of large and smaller screens. When filling 100% width of small and medium screen, this was fixed by removing the width property in the div as bootstrap was controlling width, added media query for large screens to get the 50% cover on large screens
 -text in the welcome page text box was overflowing out of the container, This was fixed by adjusting the font size to a smaller font in media query for larger screens
 
-
+- Background Image Not Covering the Entire Screen
+Bug: On smaller devices, the background image was not covering the entire screen, leaving a blank space.
+Fix:
+Used background-size: cover; to ensure the background image scales and covers the full screen without distortion.
+The background-attachment: fixed; property was applied to keep the background fixed while scrolling, creating a better visual effect.
+- Button Alignment and Spacing Issues
+Bug: The True/False buttons were not aligned correctly on different screen sizes. On small screens, they were too wide, causing layout issues.
+Fix:
+Set the buttons to display: inline-block; to make them responsive and ensure they align properly.
+Adjusted button width and margins using percentages, allowing buttons to scale with the screen width.
+Added hover and disabled states for better user interaction.
+- Score Container and Question Container Alignment
+Bug: The score container and question container were not properly aligned, especially on smaller screens. This caused issues with readability and presentation.
+Fix:
+Applied margin: 0 auto; to center both the score container and question container.
+Ensured that both containers have appropriate padding and margins to avoid overlapping content.
 
 ##### JS Related
 There were many bugs created and resolved in JavaScript. These were debugged using the console in Google Chromes Developer Tools as well as regularly applying console.log() at various points in the code to understand how a a particular variable or object was being passsed from one function to another. Further to this, ChatGPT also helped to identify some issues but was not relied on for solutions as it can often make mistakes. This is explained further in the [AI Tools Usage](#ai-tools-usage) section.
@@ -365,7 +389,12 @@ There were many bugs created and resolved in JavaScript. These were debugged usi
 - bug fix - questions and answers from the previous round were showing after the following round with those Qs and As being after it, so lengthening the page - resolved by ensuring the HTML string is empty in the runGame function, so each round a new set of questions and answers relevant to that round are showing.
 
 #### Responsiveness
-
+- Layout Issues on Small Screens
+Bug: The quiz layout was not fully responsive on smaller screens (less than 600px wide), causing elements to overflow or be misaligned.
+Fix:
+Applied media queries to adjust the layout of the quiz on smaller screens.
+Buttons and containers now resize dynamically with width: 100% for smaller screen sizes.
+The font size in question containers and score containers was adjusted for readability on mobile devices.
 
 
 #### Lighthouse Performance Test
@@ -435,7 +464,8 @@ Use of ChatGPT supported clarification of coding issues faced as well as providi
 
 ### Image Sources
 The Bookshelf background image that we used for the first and last page was taken form [Unsplash](https://unsplash.com/) 
-
+The favIcon image used on the Mind Mingle pages was sourced from [freepik](https://www.freepik.com/photos/degree/) 
+The cubes image used for the quiz page was sourced from          [pngtree]https://pngtree.com/free-backgrounds-photos/purple-cube-pictures)
 
 ### Icons/Styles
 - [Bootstrap v5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
