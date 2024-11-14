@@ -8,7 +8,7 @@
 
 body{
   background-color:rgba(239, 214, 245, 0.133);
-  max-height: 90vh;
+  max-height: 85vh;
   background-image: url(../images/cubes.avif);
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,8 +30,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 83vh;
+  justify-content:space-evenly;
+  height: 100vh;
   width: 100%;
   }
 
@@ -60,6 +60,7 @@ a {
   font-family: "Quantico",sans-serif;
 }
 #start-button{
+  margin-top:10px;
   border: 2px solid black;
   font-size: 20px;
   height: 80px;
@@ -69,6 +70,8 @@ a {
   background-color: #3D3B8E;
   color: white;
 }
+
+
 
 /* ----------Game Area-----------------**/
 /* .heading{
@@ -248,10 +251,14 @@ footer {
   color: #fff;
   display:block;
   position:relative;
-  padding: 10px 0;
+  padding: 5px 0;
   width:100%;
   height:100px;
-  margin-top: 90px;
+  bottom: 0;
+  margin-top: 5px;
+  padding-top: 0;
+
+  
 }
 #gitHub {
   text-align: center;
@@ -269,7 +276,7 @@ footer {
 }
 footer p {
   text-align: left;
-  font-size: 0.7rem;
+  font-size: 1em;
   padding-bottom: 10px;
   font-family: "Quantico",sans-serif;
 }
@@ -299,16 +306,53 @@ footer p {
   }
 
 
+/*---------- Quiz End page --------------*/
 
-/*
+#quiz-end-page{
+  text-align: center;
+  background-image: url("../images/site-images/books-1204029_1280.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-body {
-    text-align: center;
-    font-family: 'Roboto Condensed',sans-serif;
+
+#end-quiz-header{
+ 
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: #3D3B8E;
+  opacity: 0.8;
+  color: white;
+ 
+
 }
-.container{
-    display: flex;
-    justify-content: center;
-    height: 75vh;
+
+#final-results-area{
+  flex-direction: column;
+  display: flex;
+  margin-top: 10px;
+  background-color: #3D3B8E;
+  opacity: 0.9;
+  color: white;
+  margin-top: 15px;
+  width: 50%;
 }
-*/
+
+.responses{
+  font-size: 1.5em;
+
+}
+
+#play-again{
+  border: 2px solid black;
+  font-size: 20px;
+  height: 80px;
+  border-radius: 15px;
+  width: 120px;
+  margin-bottom: 20px;
+  background-color: #3D3B8E;
+  color: white;
+
+}

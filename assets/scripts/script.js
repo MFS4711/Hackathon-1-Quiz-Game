@@ -89,7 +89,7 @@ function runGame(gameState) {
     quizPage.style.display = "block";
   }
 
-  if (endPage.style.display === "block") {
+  if (endPage.style.display === "flex") {
     endPage.style.removeProperty("display");
     endPage.style.display = "none";
   }
@@ -237,7 +237,7 @@ function endGame(gameState) {
   }
   if (endPage.style.display === "none") {
     endPage.style.removeProperty("display");
-    endPage.style.display = "block";
+    endPage.style.display = "flex";
   }
 
   // Display final Score
