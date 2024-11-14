@@ -162,7 +162,7 @@ margin-left: 220px;
 color:#e53935;
 text-align: end;
 }
-@media  (min-width:576px) {
+@media  (min-width:300px) {
 
     .instructions-container{
       font-size: 20px;
@@ -177,6 +177,17 @@ text-align: end;
       color: white;
       font-family: "Quantico",sans-serif;
   
+    }
+
+    #final-results-area{
+      flex-direction: column;
+      display: flex;
+      margin-top: 10px;
+      background-color: #3D3B8E;
+      opacity: 0.9;
+      color: white;
+      margin-top: 15px;
+      width: 50%;
     }
     
   }
