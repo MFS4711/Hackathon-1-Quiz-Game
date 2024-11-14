@@ -345,6 +345,10 @@ Mention any issues found and how they were resolved.
 
 
 ##### CSS Related
+There were a couple of Fixes required in the css mainly due to resonsiveness of the project, Dev tools in chrome was used to identify and resolve the issues.
+- Page Scrolling left and right with a visible scroll bar, Resolved by adding overflow-x: hidden to the body, this removed the horizontal scrolling
+- Final page results div, filling 50% of large and smaller screens. When filling 100% width of small and medium screen, this was fixed by removing the width property in the div as bootstrap was controlling width, added media query for large screens to get the 50% cover on large screens
+-text in the welcome page text box was overflowing out of the container, This was fixed by adjusting the font size to a smaller font in media query.
 
 
 
