@@ -39,9 +39,13 @@
 A brief description of the project's purpose, what it aims to achieve, and the value it provides to the users.  
 **Guidance:** Begin filling out this section during Phase 1: Ideation & Initial Setup. Clearly articulate the main goal of your project, what it aims to achieve, and how it will provide value to your target audience.
 
+The purpose of this Hackathon Project is to develop a product which demonstrates use of HTML, CSS and JavaScript in a collaborative, agile, work environment. The product was intended to have a scope basis which could be completed within 3 days by a team of 3. Due to this, during ideation, the team decided we could best demonstrate our skills through creation of a simple quiz game. This would make use of an API in JavaScript, so providing the website with better functionality and the user with a more enjoyable experience as the API considered provides a pool of questions from which a random set of varying difficulty can be retrieved. As such, the product can be used as a fun, quick educational tool to help expand the users knowledge. This is the main purpose of the product.
+
 ### Target Audience
 Identify the target audience for your website and explain why this audience will benefit from the project.  
 **Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
+
+Although there is not a particular audience this product could be usefule for, as it can be enjoyed by people of all ages, we believe that it would be most beneficial for students and young adults/teens as it can be used as a quick game to be played when commuting. As the website will be designed with mobile first in mind, this would be a useful application for the target audience to use on their travels. As the product develops over time, there may be introduction of more categories and question types, so ensuring the user is not getting bored after a while.
 
 ## User Stories
 
