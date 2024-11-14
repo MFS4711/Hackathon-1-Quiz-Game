@@ -275,7 +275,29 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 The team ensured to adhere to accessibility guidelines by using the combinations of colours we picked. We used [Coolers Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) to examine the colours used during the project.  Below you will find the results of the various contrast checks we completed where we compared the background colour with the foreground content:
 
 #### Screen Reader Accessibility
+Mind Mingle is designed with accessibility in mind to ensure an inclusive experience for all users, including those who rely on screen readers and other assistive technologies. Below are the key features and practices implemented in the game to enhance accessibility for screen reader users:
 
+1. Semantic HTML Structure
+The game uses semantic HTML tags to define the page structure clearly, allowing screen readers to understand the hierarchy of the content and navigate through it easily. Proper use of heading tags (<h1>, <h2>, <h3>) helps to create a logical content structure, while form elements like <label> and <input> are properly associated for better interaction.
+
+For exemple:
+
+<h1>Welcome to Mind Mingle</h1>
+
+2. ARIA (Accessible Rich Internet Applications) Support
+To ensure dynamic elements and interactive features are accessible, Mind Mingle includes ARIA attributes where needed.
+
+ARIA Labels: Interactive elements like buttons and icons that don’t have visible text are provided with descriptive aria-label attributes to ensure screen readers can describe their function to the user.
+
+Exemple : 
+ <li><a href="https://github.com/Mery369" target="_blank" rel="noopener" aria-label="Visit Meryem's GitHub"><i class="fa-brands fa-github" aria-hidden="true"> Meryem</i></a>
+
+
+3. Alt Text for Images
+Images in Mind Mingle that provide meaningful content have descriptive alt text, ensuring that screen reader users understand the visual context. Decorative images are marked with empty alt="" attributes so they are ignored by screen readers.
+ <link rel="icon" type="image/x-icon" alt="Owl symbole of wisdom" href="assets/images/readme/logo_owl.avif">
+
+By implementing these accessibility features, Mind Mingle aims to ensure that everyone, regardless of their abilities, can enjoy the game and participate in a meaningful way. We encourage users to provide feedback on accessibility improvements or issues to continue refining the experience.
 ## Features Implementation
 
 ### Core Features (Must-Haves)
