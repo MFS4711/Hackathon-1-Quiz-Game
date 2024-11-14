@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // Add questions to gameSet object
             gameState.questionSet = object.results;
             gameState.questionsRemaining = gameState.questionSet.length;
-            console.log("gameState:", gameState);
             // function to run the game should be below
             runGame(gameState);
           });
@@ -117,7 +116,6 @@ function displayQuestion(gameState) {
   // display the question
   const currentQuestion =
     gameState.questionSet[gameState.questionIndex].question.replace(/&quot;/g, '"').replace(/&#039;/g, "'");
-  console.log("question:", currentQuestion);
 
   const questionElement = document.getElementById("question");
   questionElement.innerText = currentQuestion;

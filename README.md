@@ -305,6 +305,18 @@ Mention any issues found and how they were resolved.
 
 #### Bug Fixes
 
+#### JS Related
+There were many bugs created and resolved in JavaScript. These were debugged using the console in Google Chromes Developer Tools as well as regularly applying console.log() at various points in the code to understand how a a particular variable or object was being passsed from one function to another. Further to this, ChatGPT also helped to identify some issues but was not relied on for solutions as it can often make mistakes. This is explained further in the [AI Tools Usage](#ai-tools-usage) section.
+
+- bug fix - play again button was not fetching API - fixed by amending the if statement argument ensuring play again and start game operate in the same way and a new set of questions is retrieved.
+- bug fix - variables from DOMContentLoaded event listener were not being passed to the runGame() function - resolved by making the variables parameters to the runGame() and the others to allow for variables to pass through
+- bug fix - as a result of above fix, new bug related to game not initialising properly and difficult to read code - resolved by creating a gameState object in the DOMContentLoaded Event Listener to contain variables used throughout the game and passing this as the parameter for following functions. This made code eaier to read and more effective.
+- bug fix - as a result of above fix, the questions variable fetched from the API were not connected - fixed by adding the question and number of question properties to the object after the API was fetched.
+- bug fix - quiz was not ending - resolved by adding logic to nextQuestion() function to display the final page after the questionIndex had reached the length of the questions array.
+- bug fix - score not reseting when play again is pressed - add logic in endGame function to reset the object properties to as they were in the DOMContentLoaded Event Listener, so allowing the game to reset.
+- bug fix - after creating the enable and disable answer button functions, the buttons were disabled when play again is clicked - resolved by calling the enableAnswerButtons() function in the endGame(), so resetting the button
+- bug fix - questions and answers from the previous round were showing after the following round with those Qs and As being after it, so lengthening the page - resolved by ensuring the HTML string is empty in the runGame function, so each round a new set of questions and answers relevant to that round are showing.
+
 #### Responsiveness
 
 ### Validation
