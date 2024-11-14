@@ -258,14 +258,24 @@ This is very similar to the tablet view, the only difference being that the cont
 The layout follows the laptop view but there should be a container which stops the content growing at a certain point.
 
 ### Colours
+![Color Palette](./assets/images/readme/mind%20mingle.png)
 
-#### A particular colour (#hexcode)
+#### Marian Blue  (#3D3B8E)
+We chose this color as the maain theme colour throughout the page, it proves nice contrast to the background and fits 
+in well with the theme of the quiz, for text and information boxes the colour is used with an opacity of 0.8 to allow the background image to be partly visible, this colour is used as a solid for buttons
 
-#### Another colour (#hexcode)
+#### Vermillion (#E53935)
+This colour is used to provide the user with a clear visual indicator of questions remaing
 
-#### etc.
+#### Old gold (#CFB53B)
+This colour is used to provide the user with a clear visual indicator of current correct answers in the questions 
+page of the quiz.
+
+### General Colours
+white and black were used in this project for some background colour and some border colour.
 
 ### Fonts
+Quantico - google font was used throughout this project, it is clear easy to read and suits the theme and style of our mind mingle quiz. 
 
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
@@ -274,8 +284,32 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 #### Colour Contrast
 The team ensured to adhere to accessibility guidelines by using the combinations of colours we picked. We used [Coolers Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) to examine the colours used during the project.  Below you will find the results of the various contrast checks we completed where we compared the background colour with the foreground content:
 
-#### Screen Reader Accessibility
+![Colour contrast Check](./assets/images/readme/contrast-checker.png)
 
+#### Screen Reader Accessibility
+Mind Mingle is designed with accessibility in mind to ensure an inclusive experience for all users, including those who rely on screen readers and other assistive technologies. Below are the key features and practices implemented in the game to enhance accessibility for screen reader users:
+
+1. Semantic HTML Structure
+The game uses semantic HTML tags to define the page structure clearly, allowing screen readers to understand the hierarchy of the content and navigate through it easily. Proper use of heading tags (<h1>, <h2>, <h3>) helps to create a logical content structure, while form elements like <label> and <input> are properly associated for better interaction.
+
+For exemple:
+
+<h1>Welcome to Mind Mingle</h1>
+
+2. ARIA (Accessible Rich Internet Applications) Support
+To ensure dynamic elements and interactive features are accessible, Mind Mingle includes ARIA attributes where needed.
+
+ARIA Labels: Interactive elements like buttons and icons that don’t have visible text are provided with descriptive aria-label attributes to ensure screen readers can describe their function to the user.
+
+Exemple : 
+ <li><a href="https://github.com/Mery369" target="_blank" rel="noopener" aria-label="Visit Meryem's GitHub"><i class="fa-brands fa-github" aria-hidden="true"> Meryem</i></a>
+
+
+3. Alt Text for Images
+Images in Mind Mingle that provide meaningful content have descriptive alt text, ensuring that screen reader users understand the visual context. Decorative images are marked with empty alt="" attributes so they are ignored by screen readers.
+ <link rel="icon" type="image/x-icon" alt="Owl symbole of wisdom" href="assets/images/readme/logo_owl.avif">
+
+By implementing these accessibility features, Mind Mingle aims to ensure that everyone, regardless of their abilities, can enjoy the game and participate in a meaningful way. We encourage users to provide feedback on accessibility improvements or issues to continue refining the experience.
 ## Features Implementation
 
 ### Core Features (Must-Haves)
@@ -382,6 +416,7 @@ Educational resources used include [Code Institute](https://codeinstitute.net/),
 Use of ChatGPT supported clarification of coding issues faced as well as providing suggestions for improvement.
 
 ### Image Sources
+The Bookshelf background image that we used for the first and last page was taken form [Unsplash](https://unsplash.com/) 
 
 
 ### Icons/Styles
