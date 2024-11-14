@@ -261,14 +261,24 @@ This is very similar to the tablet view, the only difference being that the cont
 The layout follows the laptop view but there should be a container which stops the content growing at a certain point.
 
 ### Colours
+![Color Palette](./assets/images/readme/mind%20mingle.png)
 
-#### A particular colour (#hexcode)
+#### Marian Blue  (#3D3B8E)
+We chose this color as the maain theme colour throughout the page, it proves nice contrast to the background and fits 
+in well with the theme of the quiz, for text and information boxes the colour is used with an opacity of 0.8 to allow the background image to be partly visible, this colour is used as a solid for buttons
 
-#### Another colour (#hexcode)
+#### Vermillion (#E53935)
+This colour is used to provide the user with a clear visual indicator of questions remaing
 
-#### etc.
+#### Old gold (#CFB53B)
+This colour is used to provide the user with a clear visual indicator of current correct answers in the questions 
+page of the quiz
+
+### General Colours
+white and black were used in this project for some background colour and some border colour.
 
 ### Fonts
+Quantico - google font was used throughout this project, it is clear easy to read and suits the theme and style of our mind mingle quiz. 
 
 ### Accessibility Considerations
 Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
