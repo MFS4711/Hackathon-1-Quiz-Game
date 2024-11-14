@@ -15,15 +15,11 @@ document.addEventListener("DOMContentLoaded", function () {
     questionNumber: 1,
     score: 0,
   };
-
+  
+  // API URL
   const apiURL = `https://opentdb.com/api.php?amount=10&category=9&type=boolean`;
 
-  // Add Event Listeners to buttons
-  // 5 buttons
-  // - Start Game and Play Again will have the same function
-  // - Next Question button displays the next question
-  // - True or False buttons are answer buttons
-
+  // Button Event Listeners
   let buttons = document.getElementsByTagName("button");
   for (let button of buttons) {
     button.addEventListener("click", function () {
@@ -31,13 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
         this.getAttribute("data-type") === "start-btn" ||
         this.getAttribute("data-type") === "play-again-btn"
       ) {
-        // This will generate the object with quiz questions - play again gives a new random set
         fetch(apiURL)
           .then(function (response) {
             return response.json();
           })
           .then(function (object) {
-            // console.log(object);
             // Add questions to gameSet object
             gameState.questionSet = object.results;
             gameState.questionsRemaining = gameState.questionSet.length;
@@ -49,32 +43,22 @@ document.addEventListener("DOMContentLoaded", function () {
         this.getAttribute("data-type") === "true-btn" ||
         this.getAttribute("data-type") === "false-btn"
       ) {
-        //   function that checks the answer
+        // function that checks the answer
         checkAnswer(this, gameState);
-
-        // function that displays feedback
       } else if (this.getAttribute("data-type") === "next-question-btn") {
         // function which gets next question
-        // console.log("gameState:", gameState);
         nextQuestion(gameState);
       }
     });
   }
 });
 
-// Api already gives random questions
-// Need a function which applies one question and then the next one after the next button is pressed
-// Need a function to increment score
-// Need a function to countdown questions left
-
 /**
  * This Function should remove the divs containing the first page and end page, only displaying the ques
  */
 function runGame(gameState) {
-  // Hide the start game and play again page
-  // Make the question area page visible
 
-  // SOMETHING TO THINK ABOUT - separate function can be used for the page logic - can use switch case?
+  // Perhaps page logic can be changed to a seperate function
   const openingPage = document.getElementById("homepage");
   const quizPage = document.getElementById("game-area");
   const endPage = document.getElementById("quiz-end-page");
@@ -94,7 +78,6 @@ function runGame(gameState) {
     endPage.style.display = "none";
   }
 
-  // SOMETHING TO THINK ABOUT - maybe reset the below score and number when play again?
   // display score is 0
   const currentScore = document.getElementById("current-score");
   currentScore.innerText = gameState.score;
@@ -118,9 +101,6 @@ function runGame(gameState) {
  * This function should hide the next question button and display the question.
  */
 function displayQuestion(gameState) {
-  // console.log("index:", gameState.questionIndex);
-  // console.log("Number:", gameState.questionNumber);
-  // console.log("Api object:", gameState.questionSet);
 
   // Hide the next question button
   const nextButton = document.getElementById("btn_nextquestion");
@@ -160,7 +140,6 @@ function checkAnswer(button, gameState) {
     // increment score
     gameState.score++;
     currentScore.innerText = gameState.score;
-    // decrease questions remaining - TO BE ADDED
 
     // Feedback message using innertext or innerHTML
     feedbackMessage.innerText = "Well Done!!! That was the correct answer";
@@ -171,8 +150,7 @@ function checkAnswer(button, gameState) {
   // Disable Answer Buttons to ensure they can't be clicked whilst answer is being checked
   disableAnswerButtons();
 
-  // Display Next Quesion Button - SOMETHING TO THINK ABOUT - Make button say end quiz or some message
-
+  // Display Next Quesion Button - On last question say end quiz
   const nextButton = document.getElementById("btn_nextquestion");
   nextButton.style.display = "inline-block";
 
@@ -180,11 +158,10 @@ function checkAnswer(button, gameState) {
     nextButton.innerText = "End Quiz";
   }
 
-  // const nextButton = document.getElementById("btn_nextquestion");
-  // nextButton.style.display = "inline-block";
 }
 
 function nextQuestion(gameState) {
+
   // remove feedback message
   const feedbackMessage = document.getElementById("feedback");
   feedbackMessage.innerText = "";
@@ -243,7 +220,6 @@ function endGame(gameState) {
   // Display final Score
   const finalScore = document.getElementById("final-score");
   finalScore.innerText = ` ${gameState.score} / ${gameState.questionSet.length}`;
-  // console.log(gameState.score/gameState.questionSet.length);
 
   // Display a different message depending on the score
   const finalMessage = document.getElementById("final-message");
@@ -270,8 +246,6 @@ function endGame(gameState) {
     const question = gameState.questionSet[i].question;
     const answer = gameState.questionSet[i].correct_answer;
     const questionNum = i + 1;
-    // console.log(question);
-    // console.log(answer);
 
     let htmlString = `
     <p> <strong> Question ${questionNum}:</strong> ${question} <br>
