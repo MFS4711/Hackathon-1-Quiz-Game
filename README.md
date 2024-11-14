@@ -36,14 +36,10 @@
 ## Overview
 
 ### Purpose
-A brief description of the project's purpose, what it aims to achieve, and the value it provides to the users.  
-**Guidance:** Begin filling out this section during Phase 1: Ideation & Initial Setup. Clearly articulate the main goal of your project, what it aims to achieve, and how it will provide value to your target audience.
 
 The purpose of this Hackathon Project is to develop a product which demonstrates use of HTML, CSS and JavaScript in a collaborative, agile, work environment. The product was intended to have a scope basis which could be completed within 3 days by a team of 3. Due to this, during ideation, the team decided we could best demonstrate our skills through creation of a simple quiz game. This would make use of an API in JavaScript, so providing the website with better functionality and the user with a more enjoyable experience as the API considered provides a pool of questions from which a random set of varying difficulty can be retrieved. As such, the product can be used as a fun, quick educational tool to help expand the users knowledge. This is the main purpose of the product.
 
 ### Target Audience
-Identify the target audience for your website and explain why this audience will benefit from the project.  
-**Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
 
 Although there is not a particular audience this product could be usefule for, as it can be enjoyed by people of all ages, we believe that it would be most beneficial for students and young adults/teens as it can be used as a quick game to be played when commuting. As the website will be designed with mobile first in mind, this would be a useful application for the target audience to use on their travels. As the product develops over time, there may be introduction of more categories and question types, so ensuring the user is not getting bored after a while.
 
@@ -230,9 +226,6 @@ As a user, I want a daily challenge feature that offers new questions and reward
 ## Design Decisions
 
 ### Wireframes
-Include wireframes for key sections of your website.  
-Briefly describe the design choices, including layout, colour schemes, and fonts.  
-**Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
 
 The Wireframes were produced during the ideation phase of this project. They were designed with the user in mind and to ensure the webpage was simplistic and functional as the purpose of the webpage is to provide a fun educational experience. The layout was constructed to make use of the space as the viewport grew up to a point, 1440px, and so the content appeared differently on mobiles compared to larger screens.
 
@@ -357,15 +350,7 @@ ChatGPT was used to provide both coding support and during the ideation phase. F
 
 ## Reflection on Development Process
 
-### Successes
-Effective use of AI tools, including GitHub Copilot and DALL-E, and how they contributed to the development process.
-
-### Challenges
-Describe any challenges faced when integrating AI-generated content and how they were addressed.
-
 ### Final Thoughts
-Provide any additional insights gained during the project and thoughts on the overall process.  
-**Guidance:** Begin drafting reflections during Phase 1 and update throughout the project. Finalize this section after Phase 4. Highlight successes and challenges, particularly regarding the use of AI tools, and provide overall insights into the project.
 
 This Hackathon Project was not only the first time this team worked together on a web-based development project, it was also the first time the team worked together as such, some time was spent understanding each others personalities as well as their strengths and weaknesses in relation to coding. Arguably without this inital time spent together it would have been more difficult to understand how to collaborate and we know going forward, if we were to work in the same team, it would only become easier.
 
@@ -392,7 +377,5 @@ Use of ChatGPT supported clarification of coding issues faced as well as providi
 - [Font Awesome](https://fontawesome.com/)
 
 ## Future Improvements
-Briefly discuss potential future improvements or features that could be added to the project.  
-**Guidance:** Reflect on potential enhancements that could be made to the project after Phase 4: Final Testing, Debugging & Deployment. These could be Could user story features you didn’t have time to implement or improvements based on testing feedback.
 
 Due to time spent on bug and merge conflict fixes, we were unable to add some of the features related to the should-have user stories. This includes having a countdown timer for each question as well as creating a leaderboard. Further to this, it would have been fairly easy to add further categories and question types, however, these features, due to the issues experienced, could not feature in the product. Further to this, primarily due to a lack of the necessary skillset/experience in javascript, we were unable to add the personalisation aspect illustrated in the could-have user stories. 
