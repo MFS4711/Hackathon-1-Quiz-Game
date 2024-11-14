@@ -287,6 +287,8 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 #### Colour Contrast
 The team ensured to adhere to accessibility guidelines by using the combinations of colours we picked. We used [Coolers Contrast Checker](https://coolors.co/contrast-checker/112a46-acc8e5) to examine the colours used during the project.  Below you will find the results of the various contrast checks we completed where we compared the background colour with the foreground content:
 
+![Colour contrast Check](./assets/images/readme/contrast-checker.png)
+
 #### Screen Reader Accessibility
 
 ## Features Implementation
@@ -391,6 +393,7 @@ Educational resources used include [Code Institute](https://codeinstitute.net/),
 Use of ChatGPT supported clarification of coding issues faced as well as providing suggestions for improvement.
 
 ### Image Sources
+The Bookshelf background image that we used for the first and last page was taken form [Unsplash](https://unsplash.com/) 
 
 
 ### Icons/Styles
