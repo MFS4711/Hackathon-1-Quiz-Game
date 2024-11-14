@@ -370,7 +370,7 @@ There were many bugs created and resolved in JavaScript. These were debugged usi
 
 #### Lighthouse Performance Test
 
-
+[Lighthouse test](./assets/images/readme/lighthouse.png)
 
 ### Validation
 
